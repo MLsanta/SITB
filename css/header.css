@@ -1,0 +1,46 @@
+<style>
+    @font-face {
+    font-family: 'Godo';
+    src:url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'),
+        url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+    }
+    @font-face {
+    font-family: 'Godo';
+    src:url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'),
+        url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+    }
+
+    .hd{
+        width: 80vw;
+        height: 80px;
+        background-color: rgb(255, 164, 164);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo{
+        width: 120px;
+        height: 60px;
+        background-image: url(/img/05.Logo_PNG/NHN\ CI_White.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: red;
+        margin-left: 10px;
+    }
+
+    .nav{
+        width: 70%;
+        height: 60px;
+        background-color: rgb(170, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        gap: 50px;
+    }
+</style>
