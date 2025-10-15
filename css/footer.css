@@ -1,12 +1,12 @@
 .footer__box {
     width: 1200px;
-    height: 170px;
+    height: 100px;
     margin: auto;
     display: flex;
     justify-content: space-between;
 }
 footer {
-    width: 100vw;
+    width: 100%;
     height: 200px;
     border-top: 1px solid #ccc;
 }
@@ -32,4 +32,13 @@ footer {
     width: 28px;
     height: 28px;
     flex-shrink: 0;
+}
+.copy__right {
+    font-size: 0.8rem;
+    width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+}
+.copy__right span {
+    color: #bbb;
 }
