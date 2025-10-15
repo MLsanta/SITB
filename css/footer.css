@@ -1,0 +1,35 @@
+.footer__box {
+    width: 1200px;
+    height: 170px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+footer {
+    width: 100vw;
+    height: 200px;
+    border-top: 1px solid #ccc;
+}
+.footer__etc {
+    display: flex;
+    gap: 40px;
+    padding-top: 50px;
+}
+.plus__btns {
+    display: flex;
+    gap: 12px; /* 링크 간 간격 조정 */
+}
+
+.plus__link {
+    display: inline-flex;
+    padding-top: 50px;
+    gap: 4px; /* 텍스트와 아이콘 사이 여백 */
+    text-decoration: none;
+}
+
+.icon {
+    transition: all 0.3s;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
