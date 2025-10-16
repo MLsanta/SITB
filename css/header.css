@@ -15,14 +15,23 @@
 
     .hd{
         width: 100vw;
-        height: 80px;
-        background-color: rgb(76, 76, 76);
+        height: 50px;
+        padding-top: 40px;
+        /* border: 2px solid orange; */
+        /* background-color: black; */
         display: flex;
         justify-content: center;
         align-items: center;
         margin: auto;
         position: fixed;
-        top: 0; left: 0;
+        z-index: 100;
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+   .hd--hidden{
+        opacity: 0;
+        pointer-events: none;
     }
 
     .nav{
@@ -50,6 +59,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        text-shadow: 1px 1px 1px rgba(92, 92, 92, 0.726);
     }
 
     .nav .menu{
@@ -67,15 +77,18 @@
 
     .nav a{
         text-decoration: none;
+        text-shadow: 1px 1px 1px rgba(92, 92, 92, 0.726);
         color: white;
         position: relative;
         padding-right: 15px;
     }
 
     .nav .menu svg:hover{
-        color:black
+        text-shadow: none;
+        src: url(../src/img/logo/logo.jpg);
     }
     .nav .menu a:hover{
+        text-shadow: none;
         color: black;
     }
 
@@ -99,11 +112,11 @@
         color: initial;
     } */
     .ic{
-        width: 120px;
+        width: 150px;
         height: 80px;
         /* background-color: aquamarine; */
         display: flex;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
         font-size: 18px;
         margin-left: auto;
