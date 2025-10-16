@@ -19,12 +19,16 @@
             }
                 .outBox2 .textBox{
                     width: 1200px;
-                    height: 98px;
+                    height: 150px;
                     /* background-color: orange; */
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                }
+                .textBox h1{
+                    font-size: 30px;
+                    height: 20px;
                 }
                 .outBox2 .imgBox2{
                     width: 100%;
@@ -68,6 +72,7 @@
                         }
                             .inText1 h1{
                                 font-weight: bold;
+                                height: 10px;
                             }
                             .inText1 i{
                                 margin-left: 10px;
@@ -110,7 +115,7 @@
                     justify-content: center;
                     gap: 5px;
                 }
-                    .btns .btn{
+                    .btns .btn2{
                         width: 15%;
                         height: 98px;
                         text-align: center;
@@ -122,15 +127,15 @@
                         gap: 8px; 
                         /* background-color: gold; */
                     }
-                    .btn.active p{
+                    .btn2.active p{
                         color: #212126;
                     }
-                        .btn p{
+                        .btn2 p{
                             font-size: 28px;
                             font-weight: bold;
                             color: #C3C3C5;
                         }
-                        .btn .dot{
+                        .btn2 .dot{
                             width: 10px;
                             height: 10px;
                             background-color: rgb(33 33 38);
