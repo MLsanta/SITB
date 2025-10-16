@@ -2,18 +2,23 @@ const sections = document.querySelectorAll("section");
 const imageContainers = document.querySelectorAll(
     ".container > div:nth-child(2)"
 );
+const textContents = document.querySelectorAll(".desc__main__contents");
 
 window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
 
-    sections.forEach((sec, i) => {
-        const top = sec.offsetTop;
-        const bottom = top + sec.offsetHeight;
+    sections.forEach((section, index) => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const inView =
+            scrollY >= top - window.innerHeight / 1.5 && scrollY < top + height;
 
-        if (scrollY >= top && scrollY < bottom) {
-            imageContainers[i].classList.add("img__container__active");
+        if (inView) {
+            imageContainers[index].classList.add("img__container__active");
+            textContents[index].classList.add("active");
         } else {
-            imageContainers[i].classList.remove("img__container__active");
+            imageContainers[index].classList.remove("img__container__active");
+            textContents[index].classList.remove("active");
         }
     });
 });
