@@ -1,42 +1,40 @@
 #section1 {
-  position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: pink;
 }
 #section1 .slider {
-  position: relative;
   width: 100%;
   height: 100%;
 }
 #section .slider > div {
-  position: absolute;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+#section .slider > div.active {
+  opacity: 1;
+  z-index: 2;
 }
 #section1 video {
-  position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 #section1 .Txt {
-  position: absolute;
+  position: relative;
   left: 150px;
-  bottom: 200px;
+  bottom: 530px;
   color: #fff;
-  z-index: 2;
+  z-index: 3;
   text-shadow: 10px 10px 30px rgba(12, 11, 11, 0.45);
-  background-color: aqua;
-  opacity: 0;
   transform: translateY(50px);
   animation: txtUp 1.5s ease-out forwards;
   font-weight: 500;
 }
 #section1 .Txt > span {
-  background-color: greenyellow;
   font-size: 20px;
   font-weight: bold;
   display: inline-flex;
@@ -53,18 +51,16 @@
   border-radius: 50%;
   background: #fff;
   font-size: 16px;
-  color: transparent; /* 글자는 투명 */
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7); /* 테두리만 남겨서 '뚫린' 느낌 */
+  color: black;
 }
 #section1 .Txt h1 {
-  background-color: skyblue;
   font-size: 55px;
   line-height: 70px;
 }
 /* === 중앙 하단 컨트롤러 === */
 #section1 .control {
   position: absolute;
-  left: 290px;
+  left: 300px;
   bottom: 130px;
   transform: translateX(-50%);
   display: flex;
@@ -109,7 +105,6 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  background: transparent;
 }
 #section1 .control button:hover {
   background: rgba(161, 159, 159, 0.5);
