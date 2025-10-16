@@ -1,0 +1,149 @@
+/* 섹션2 시작 */
+        .sec__2{
+            width: 100%;
+            height: 100%;
+            /* background-color: skyblue; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+            .sec__2 .outBox2{
+                width: 100%;
+                height: 100%;
+                /* background-color: pink; */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+                .outBox2 .textBox{
+                    width: 1200px;
+                    height: 150px;
+                    /* background-color: orange; */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .textBox h1{
+                    font-size: 30px;
+                    height: 20px;
+                }
+                .outBox2 .imgBox2{
+                    width: 100%;
+                    height: 50%;
+                    /* background-color: gold; */
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                    .imgBox2 img{
+                        width: 1200px;
+                        height: 526px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        object-fit: cover;
+                        border-radius: 20px;
+                    }
+                    .imgBox2 .imgIn{
+                        width: 100%;
+                        height: 60%;
+                        /* background-color: lightgoldenrodyellow; */
+                        position: absolute;
+                        bottom: 0; left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                    }
+                        .imgIn .inText1{
+                            width: 80%;
+                            height: 70%;
+                            /* background-color: lightgray; */
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                        }
+                            .inText1 h1{
+                                font-weight: bold;
+                                height: 10px;
+                            }
+                            .inText1 i{
+                                margin-left: 10px;
+                            }
+                        .imgIn .inText2{
+                            width: 80%;
+                            height: 30%;
+                            /* background-color: lightgreen; */
+                            text-align: center;
+                        }
+                            .inText2 span {
+                                position: relative;
+                                padding: 0 10px;
+                            }
+                            .inText2 span::after {
+                                content: "";
+                                position: absolute;
+                                right: 0;
+                                top: 50%;
+                                transform: translateY(-50%);  
+                                height: 60%;                
+                                border-right: 1px solid lightgray;
+                            }
+                            .inText2 span:last-child::after{
+                                border: none;
+                            }
+                            .inText2 span:nth-child(7)::after{
+                                border: none;
+                            }
+                            .img5_in span:nth-child(3)::after{
+                                border: none;
+                            }
+
+                .outBox2 .btns{
+                    width: 70%;
+                    height: 10%;
+                    /* background-color: lightcoral; */
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                }
+                    .btns .btn2{
+                        width: 15%;
+                        height: 98px;
+                        text-align: center;
+                        line-height: 98px;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 8px; 
+                        /* background-color: gold; */
+                    }
+                    .btn2.active p{
+                        color: #212126;
+                    }
+                        .btn2 p{
+                            font-size: 28px;
+                            font-weight: bold;
+                            color: #C3C3C5;
+                        }
+                        .btn2 .dot{
+                            width: 10px;
+                            height: 10px;
+                            background-color: rgb(33 33 38);
+                            border-radius: 50%;
+                            /* position: relative;  */
+                            display: none;
+                            transform: translateY(-10px);
+                        }
+                        .dot.on{
+                            display: block;
+                        }
