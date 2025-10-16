@@ -1,3 +1,4 @@
+
 const sec1 = document.querySelector(".sec1");
 const sec2 = document.querySelector(".sec2");
 const sec3 = document.querySelector(".sec3");
@@ -17,4 +18,4 @@ window.addEventListener("scroll", () => {
     } else {
         img__container1.classList.remove("img__container__active");
     }
-});
+

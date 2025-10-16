@@ -73,6 +73,7 @@ input[type="radio"]:checked + label.desc__btn__label {
     background-position: center 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 0.3s;
 }
 .img__container2 {
     background-image: url(../src/img/2/intro2.jpg);
@@ -81,6 +82,10 @@ input[type="radio"]:checked + label.desc__btn__label {
     background-position: center 100%;
     background-repeat: no-repeat;
     background-size: cover;
+
+
+    transition: 0.3 all ease;
+
 }
 .img__container3 {
     background-image: url(../src/img/2/intro3.jpg);
@@ -89,6 +94,16 @@ input[type="radio"]:checked + label.desc__btn__label {
     background-position: center 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 0.3s ease all;
+}
+.img__container4 {
+    background-image: url(../src/img/2/intro4.jpg);
+    width: 840px;
+    height: 240px;
+    background-position: center 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.3s ease all;
 }
 
 .desc__sub__container {
@@ -121,6 +136,7 @@ input[type="radio"]:checked + label.desc__btn__label {
     height: 25%;
     /* background-color: #eee; */
 }
+
 .img__container1.img__contsiner__active {
     position: fixed; /* 화면 기준으로 고정 */
     top: 0;
@@ -130,4 +146,8 @@ input[type="radio"]:checked + label.desc__btn__label {
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 10; /* 다른 요소보다 위에 보이게 */
+
+.desc__main__contents__active {
+    transform: translateY(100px);
+    color: white;
 }
