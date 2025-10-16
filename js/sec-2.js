@@ -1,9 +1,9 @@
 let imgBoxs = document.querySelectorAll('.imgBox2')
-        let btns = document.querySelectorAll('.btn')
+        let btns = document.querySelectorAll('.btn2')
         let dots = document.querySelectorAll('.dot')
 
         imgBoxs.forEach((item, idx) => {
-            item.style.display = idx === 0 ? 'flex' : 'none'
+            if(idx !== 0) item.style.display = 'none'
         })
         btns[0].classList.add('active')
         dots[0].classList.add('on')
