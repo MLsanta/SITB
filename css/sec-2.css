@@ -64,6 +64,7 @@
                             flex-direction: column;
                             align-items: center;
                             justify-content: center;
+                            cursor: pointer;
                         }
                             .inText1 h1{
                                 font-weight: bold;
@@ -114,8 +115,11 @@
                         height: 98px;
                         text-align: center;
                         line-height: 98px;
-                        position: relative;
                         cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 8px; 
                         /* background-color: gold; */
                     }
                     .btn.active p{
@@ -131,22 +135,10 @@
                             height: 10px;
                             background-color: rgb(33 33 38);
                             border-radius: 50%;
-                            position: absolute;
-                            top: 30%; right: 15%;
+                            /* position: relative;  */
                             display: none;
+                            transform: translateY(-10px);
                         }
                         .dot.on{
                             display: block;
-                        }
-                        .btn:nth-child(1) .dot{
-                            top: 30%; right: 25%;
-                        }
-                        .btn:nth-child(2) .dot{
-                            top: 30%; right: 3%;
-                        }
-                        .btn:nth-child(3) .dot{
-                            top: 30%; right: 7%;
-                        }
-                        .btn:nth-child(4) .dot{
-                            top: 30%; right: 5%;
                         }
