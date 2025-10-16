@@ -1,15 +1,20 @@
-let sy = window.scrollY;
-let sec1 = document.querySelector(".sec1");
-let sec2 = document.querySelector(".sec2");
-let sec3 = document.querySelector(".sec3");
-let sec4 = document.querySelector(".sec4");
+const sec1 = document.querySelector(".sec1");
+const sec2 = document.querySelector(".sec2");
+const sec3 = document.querySelector(".sec3");
+const sec4 = document.querySelector(".sec4");
+const img__container1 = document.querySelector(".img__container1");
+
+let s1__pos = sec1.offsetTop;
+let s2__pos = sec2.offsetTop;
+let s3__pos = sec3.offsetTop;
+let s4__pos = sec4.offsetTop;
 
 window.addEventListener("scroll", () => {
-    let sec1Pos = sec1.offsetTop;
-    let sec2Pos = sec2.offsetTop;
-    let sec3Pos = sec3.offsetTop;
-    let sec4Pos = sec4.offsetTop;
+    let sy = window.scrollY;
 
-    if (sy >= sec1Pos) {
+    if (sy >= s2__pos) {
+        img__container1.classList.add("img__container__active");
+    } else {
+        img__container1.classList.remove("img__container__active");
     }
 });
