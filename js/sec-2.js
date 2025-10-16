@@ -1,5 +1,5 @@
 let imgBoxs = document.querySelectorAll('.imgBox2')
-        let btns = document.querySelectorAll('.btn')
+        let btns = document.querySelectorAll('.btn2')
         let dots = document.querySelectorAll('.dot')
 
         imgBoxs.forEach((item, idx) => {
