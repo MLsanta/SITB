@@ -1,14 +1,121 @@
-.sub2-sec1{
-    width: 100%;
-    height: 100%;
-    background-color: pink;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-    .sub2-title{
-        width: 1360px;
-        height: 280px;
-        background-color: skyblue;
-    }
+/* 서브메뉴 2 섹션 1 시작 */
+        .sub2-sec1{
+            width: 100%;
+            /* height: 100%; */
+            /* background-color: pink; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+            .sub2-title{
+                width: 1200px;
+                height: 150px;
+                /* background-color: skyblue; */
+                margin-top: 100px;
+            }
+            .sub2-sec1-outBox{
+                width: 1200px;
+                height: 626px;
+                /* background-color: aquamarine; */
+            }
+                .sub2-sec1-outBox-imgBox{
+                    width: 100%;
+                    height: 481px;
+                    /* background-color: beige; */
+                    display: flex;
+                    overflow: hidden;
+                    position: relative;
+                }
+                    .sub2-sec1-outBox-imgBox img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                        cursor: grab;
+                        object-fit: cover;
+                    }
+                    .sub2-sec1-outBox-imgBox-btn{
+                        width: 100px;
+                        height: 32px;
+                        background-color: #212126;
+                        color: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 3px;
+                        border-radius: 20px;
+                        position: absolute;
+                        bottom: 5%;
+                        right: 2%;
+                        z-index: 10;
+                    }
+                        .sub2-sec1-outBox-imgBox-btn i{
+                            font-size: 16px;
+                        }
+                        .sub2-sec1-outBox-imgBox-btn-changePage,
+                        .sub2-sec1-outBox-imgBox-btn-page, div{
+                            font-size: 12px;
+                        }
+                .sub2-sec1-outBox-textBox{
+                    width: 100%;
+                    height: 145px;
+                    /* background-color: lightcoral; */
+                    display: flex;
+                    margin-top: 10px;
+                }
+                    .sub2-sec1-outBox-textBox-left{
+                        width: 40%;
+                        height: 100%;
+                        color: #212126;
+                        /* background-color: lightgoldenrodyellow; */
+                    }
+                        .sub2-sec1-outBox-textBox-left h2{
+                            font-size: 28px;
+                        }
+                        .sub2-sec1-outBox-textBox-left p{
+                            font-size: 18px;
+                        }
+                    .sub2-sec1-outBox-textBox-right{
+                        width: 60%;
+                        height: 100%;
+                        /* background-color: lightgray; */
+                    }
+                        .sub2-sec1-outBox-textBox-right-top{
+                            width: 100%;
+                            height: 80%;
+                            color: #57575B;
+                            /* background-color: lightgreen; */
+                        }
+                            .sub2-sec1-outBox-textBox-right-top p{
+                                font-size: 16px;
+                            }
+                        .sub2-sec1-outBox-textBox-right-bottom{
+                            width: 100%;
+                            height: 20%;
+                            /* background-color: lightsalmon; */
+                            display: flex;
+                            color: #62626A;
+                            margin-top: 20px;
+                            cursor: pointer;
+                        }
+                            .sub2-sec1-outBox-textBox-right-bottom-btn1{
+                                width: 90px;
+                                height: 100%;
+                                background-color: #F8F8F8;
+                                border-radius: 10px;
+                                margin-right: 20px;
+                                font-size: 14px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            .sub2-sec1-outBox-textBox-right-bottom-btn2{
+                                width: 110px;
+                                height: 100%;
+                                background-color: #F8F8F8;
+                                border-radius: 10px;
+                                font-size: 14px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
