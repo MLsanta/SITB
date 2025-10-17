@@ -297,8 +297,8 @@ input[type="radio"]:checked + label.desc__btn__label {
     z-index: 20;
     transition: all 0.3s ease;
 }
-.desc__main__contents__active h1 {
+h1.desc__main__contents__active {
     color: white;
     transform: translateY(100px);
-    z-index: 10;
+    transition: all 0.3s ease;
 }
