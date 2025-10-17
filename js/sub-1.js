@@ -117,3 +117,15 @@ desc__btn__4.addEventListener("click", () => {
         behavior: "smooth",
     });
 });
+if (window.scrollY > s__top__1__top && window.scrollY < s__top__1__top) {
+    desc__btn__1.checked = true;
+}
+if (window.scrollY > s__top__2__top && window.scrollY < s__top__2__top) {
+    desc__btn__2.checked = true;
+}
+if (window.scrollY > s__top__3__top && window.scrollY < s__top__1__top) {
+    desc__btn__3.checked = true;
+}
+if (window.scrollY > s__top__4__top && window.scrollY < s__top__1__top) {
+    desc__btn__4.checked = true;
+}
