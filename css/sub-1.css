@@ -62,9 +62,25 @@ input[type="radio"]:checked + label.desc__btn__label {
     height: 480px;
     /* background-color: wheat; */
     margin: 200px auto;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 5;
 }
 .desc__main__contents1 {
+    width: 100%;
     font-size: 1.6rem;
+    position: absolute;
+    left: 0;
+    top: -120px;
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+.desc__main__contents1__active.desc__main__contents1 h1 {
+    color: white;
+    position: absolute;
+    transform: translateY(-100px);
+    z-index: 20;
 }
 .desc__main__contents2 {
     font-size: 1.6rem;
@@ -83,6 +99,8 @@ input[type="radio"]:checked + label.desc__btn__label {
     background-repeat: no-repeat;
     background-size: cover;
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
 }
 .img__container2 {
     background-image: url(../src/img/2/intro2.jpg);
@@ -111,16 +129,45 @@ input[type="radio"]:checked + label.desc__btn__label {
     background-size: cover;
     transition: all 0.3s ease;
 }
-.desc__sub__container {
+.desc__sub__container1 {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
     transition: all 0.3s ease;
+    top: 250px;
+    position: absolute;
+}
+.desc__sub__container2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+.desc__sub__container3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+.desc__sub__container4 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    transition: all 0.3s ease;
+    position: absolute;
+    z-index: 20;
 }
 .desc__sub__title {
     font-size: 1.4rem;
     font-weight: bold;
     transition: all 0.3s ease;
+    z-index: 20;
 }
 .desc__sub__contents {
     padding-right: 20px;
@@ -128,6 +175,7 @@ input[type="radio"]:checked + label.desc__btn__label {
     font-weight: 500;
     color: #555;
     transition: all 0.3s ease;
+    z-index: 20;
 }
 .sec2 {
     width: 100%;
@@ -149,6 +197,8 @@ input[type="radio"]:checked + label.desc__btn__label {
     background-position: 50% 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
 }
 .desc__sub__container__active {
     color: white;
