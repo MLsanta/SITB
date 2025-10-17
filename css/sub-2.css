@@ -1,4 +1,4 @@
-.nav2-sec1{
+.sub2-sec1{
     width: 100%;
     height: 100%;
     background-color: pink;
@@ -7,7 +7,7 @@
     align-items: center;
     flex-direction: column;
 }
-    .nav2-title{
+    .sub2-title{
         width: 1360px;
         height: 280px;
         background-color: skyblue;

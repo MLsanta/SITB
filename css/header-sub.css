@@ -20,7 +20,7 @@
 .hd {
     width: 100vw;
     height: 50px;
-    padding-top: 40px;
+    padding-top: 20px;
     /* border: 2px solid orange; */
     /* background-color: black; */
     display: flex;
@@ -41,7 +41,7 @@
 .nav {
     /* display: inline-block;  a 태그가 inline(text) width와 height 가질 수 없어서 블록 형태로 변경 */
     width: 100%;
-    height: 80px;
+    height: 70px;
     /* background-color: rgb(82, 110, 110);*/
     display: flex;
     justify-content: center;
@@ -54,7 +54,7 @@
 .nav .logo {
     width: 180px;
     height: 120px;
-    background-image: url(/SITB/src/img/logo/NHN.png);
+    background-image: url(/SITB/src/img/logo/logo.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -63,7 +63,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: 1px 1px 1px rgba(92, 92, 92, 0.726);
+    /* text-shadow: 1px 1px 1px rgba(92, 92, 92, 0.726); */
 }
 
 .nav .menu {
@@ -80,8 +80,8 @@
 
 .nav a {
     text-decoration: none;
-    text-shadow: 1px 1px 1px rgba(92, 92, 92, 0.726);
-    color: white;
+    /* text-shadow: 1px 1px 1px rgba(92, 92, 92, 0.726); */
+    color: rgb(19, 19, 19);
     position: relative;
     padding-right: 15px;
 }
@@ -126,6 +126,6 @@
     color: white;
 }
 .header__active {
-    transform: translateY(-200px);
+    transform: translateY(-100px);
     opacity: 0;
 }
