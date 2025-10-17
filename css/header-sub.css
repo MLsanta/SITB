@@ -54,7 +54,7 @@
 .nav .logo {
     width: 180px;
     height: 120px;
-    background-image: url(/SITB/src/img/logo/logo.jpg);
+    background-image: url(/SITB/src/img/logo/NHN_black.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -88,7 +88,7 @@
 
 .nav .menu svg:hover {
     text-shadow: none;
-    src: url(../src/img/logo/logo.jpg);
+    src: url(../src/img/logo/NHN_black.png);
 }
 .nav .menu a:hover {
     text-shadow: none;
