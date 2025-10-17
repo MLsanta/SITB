@@ -1,6 +1,7 @@
 body {
     margin: 0;
     height: 400vh;
+    overflow-x: hidden;
 }
 * {
     text-decoration: none;
@@ -76,20 +77,54 @@ input[type="radio"]:checked + label.desc__btn__label {
     z-index: 20;
     transition: all 0.3s ease;
 }
+.desc__main__contents4 {
+    width: 100%;
+    font-size: 1.6rem;
+    position: absolute;
+    left: 0;
+    top: -120px;
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+.desc__main__contents2 {
+    width: 100%;
+    font-size: 1.6rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+.desc__main__contents3 {
+    width: 100%;
+    font-size: 1.6rem;
+    position: absolute;
+    left: 0;
+    top: -120px;
+    z-index: 20;
+    transition: all 0.3s ease;
+}
 .desc__main__contents1__active.desc__main__contents1 h1 {
     color: white;
     position: absolute;
-    transform: translateY(-100px);
+    transform: translateY(100px);
     z-index: 20;
+    transition: all 0.3s ease;
 }
-.desc__main__contents2 {
-    font-size: 1.6rem;
+.desc__main__contents2 h1 {
+    font-size: 3rem;
+    transition: all 0.3s ease;
+    color: black;
 }
-.desc__main__contents3 {
-    font-size: 1.6rem;
+.desc__main__contents3 h1 {
+    font-size: 3rem;
+    transition: all 0.3s ease;
+    color: black;
 }
-.desc__main__contents4 {
-    font-size: 1.6rem;
+.desc__main__contents4 h1 {
+    font-size: 3rem;
+    transition: all 0.3s ease;
+    color: black;
 }
 .img__container1 {
     background-image: url(../src/img/2/intro1.jpg);
@@ -144,6 +179,7 @@ input[type="radio"]:checked + label.desc__btn__label {
     justify-content: space-between;
     padding-top: 20px;
     transition: all 0.3s ease;
+    top: 250px;
     position: absolute;
 }
 .desc__sub__container3 {
@@ -152,6 +188,7 @@ input[type="radio"]:checked + label.desc__btn__label {
     justify-content: space-between;
     padding-top: 20px;
     transition: all 0.3s ease;
+    top: 250px;
     position: absolute;
 }
 .desc__sub__container4 {
@@ -160,8 +197,8 @@ input[type="radio"]:checked + label.desc__btn__label {
     justify-content: space-between;
     padding-top: 20px;
     transition: all 0.3s ease;
+    top: 250px;
     position: absolute;
-    z-index: 20;
 }
 .desc__sub__title {
     font-size: 1.4rem;
@@ -227,7 +264,40 @@ input[type="radio"]:checked + label.desc__btn__label {
     transform: translateY(-100px);
     z-index: 10;
 }
-.desc__main__contents1__active {
+.desc__main__contents__active {
+    color: white;
+    transform: translateY(100px);
+    z-index: 10;
+}
+
+.desc__main__contents2 h1 {
+    width: 100%;
+    font-size: 3rem;
+    position: absolute;
+    left: 0;
+    top: -120px;
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+.desc__main__contents3 {
+    width: 100%;
+    font-size: 3rem;
+    position: absolute;
+    left: 0;
+    top: -120px;
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+.desc__main__contents4 {
+    width: 100%;
+    font-size: 3rem;
+    position: absolute;
+    left: 0;
+    top: -120px;
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+.desc__main__contents__active h1 {
     color: white;
     transform: translateY(100px);
     z-index: 10;
