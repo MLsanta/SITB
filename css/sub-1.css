@@ -63,7 +63,16 @@ input[type="radio"]:checked + label.desc__btn__label {
     /* background-color: wheat; */
     margin: 200px auto;
 }
-.desc__main__contents {
+.desc__main__contents1 {
+    font-size: 1.6rem;
+}
+.desc__main__contents2 {
+    font-size: 1.6rem;
+}
+.desc__main__contents3 {
+    font-size: 1.6rem;
+}
+.desc__main__contents4 {
     font-size: 1.6rem;
 }
 .img__container1 {
@@ -73,6 +82,7 @@ input[type="radio"]:checked + label.desc__btn__label {
     background-position: center 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all 0.3s ease;
 }
 .img__container2 {
     background-image: url(../src/img/2/intro2.jpg);
@@ -81,6 +91,7 @@ input[type="radio"]:checked + label.desc__btn__label {
     background-position: center 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all 0.3s ease;
 }
 .img__container3 {
     background-image: url(../src/img/2/intro3.jpg);
@@ -89,22 +100,34 @@ input[type="radio"]:checked + label.desc__btn__label {
     background-position: center 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all 0.3s ease;
 }
-
+.img__container4 {
+    background-image: url(../src/img/2/intro4.jpg);
+    width: 840px;
+    height: 240px;
+    background-position: center 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+}
 .desc__sub__container {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
+    transition: all 0.3s ease;
 }
 .desc__sub__title {
     font-size: 1.4rem;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 .desc__sub__contents {
     padding-right: 20px;
     line-height: 30px;
     font-weight: 500;
     color: #555;
+    transition: all 0.3s ease;
 }
 .sec2 {
     width: 100%;
@@ -121,13 +144,41 @@ input[type="radio"]:checked + label.desc__btn__label {
     height: 25%;
     /* background-color: #eee; */
 }
-.img__container1.img__contsiner__active {
-    position: fixed; /* 화면 기준으로 고정 */
-    top: 0;
-    left: 0;
-    transform: scale(10);
-    background-position: center center;
+.img__container__active {
+    transform: scale(3);
+    background-position: 50% 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: 10; /* 다른 요소보다 위에 보이게 */
+}
+.desc__sub__container__active {
+    color: white;
+}
+.desc__sub__container1.desc__sub__container__active .desc__sub__title,
+.desc__sub__container1.desc__sub__container__active .desc__sub__contents {
+    color: white;
+    transform: translateY(-100px);
+    z-index: 10;
+}
+.desc__sub__container2.desc__sub__container__active .desc__sub__title,
+.desc__sub__container2.desc__sub__container__active .desc__sub__contents {
+    color: white;
+    transform: translateY(-100px);
+    z-index: 10;
+}
+.desc__sub__container3.desc__sub__container__active .desc__sub__title,
+.desc__sub__container3.desc__sub__container__active .desc__sub__contents {
+    color: white;
+    transform: translateY(-100px);
+    z-index: 10;
+}
+.desc__sub__container4.desc__sub__container__active .desc__sub__title,
+.desc__sub__container4.desc__sub__container__active .desc__sub__contents {
+    color: white;
+    transform: translateY(-100px);
+    z-index: 10;
+}
+.desc__main__contents1__active {
+    color: white;
+    transform: translateY(100px);
+    z-index: 10;
 }
