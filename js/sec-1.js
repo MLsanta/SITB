@@ -1,104 +1,107 @@
-$(document).ready(function () {
-  let slides = $(".slider > div");
-  let bar = $(".bar");
-  let startNum = $(".start");
-  let idx = 0;
-  let timer = null;
-  let barTimer = null;
+      $(function () {
+        const slides = $(".slide");
+        const bar = $(".bar");
+        const startNum = $(".start");
+        let idx = 0;
+        let isPlaying = false;
+        const fadeN = 1000;
 
-  let fadeN = 100; // 페이드 속도
-  let dur = 7000; // 슬라이드 유지 시간
+        function barReset() {
+          bar.stop(true).css({ width: "0%" });
+        }
 
-  // ====== 페이드 전환 ======
-  function next() {
-    let nextIdx = idx === slides.length - 1 ? 0 : idx + 1;
-    $(slides[idx]).stop(true).fadeOut(fadeN).removeClass("active");
-    $(slides[nextIdx]).stop(true).fadeIn(fadeN).addClass("active");
-    idx = nextIdx;
-    startNum.text(String(idx + 1).padStart(2, "0"));
-  }
+        function barStart(video, callback) {
+          if (!video.duration) {
+            video.addEventListener("loadedmetadata", function onMeta() {
+              video.removeEventListener("loadedmetadata", onMeta);
+              barStart(video, callback);
+            });
+            return;
+          }
 
-  function prev() {
-    let prevIdx = idx === 0 ? slides.length - 1 : idx - 1;
-    $(slides[idx]).stop(true).fadeOut(fadeN).removeClass("active");
-    $(slides[prevIdx]).stop(true).fadeIn(fadeN).addClass("active");
-    idx = prevIdx;
-    startNum.text(String(idx + 1).padStart(2, "0"));
-  }
+          const dur = video.duration * 1000;
+          bar
+            .stop(true)
+            .css({ width: "0%" })
+            .animate(
+              { width: "100%" },
+              { duration: dur, easing: "linear", complete: callback }
+            );
+        }
 
-  // ====== 진행바 ======
-  function barReset() {
-    bar.stop(true, true).css({ width: "0%" });
-  }
+        function next() {
+          const nextIdx = (idx + 1) % slides.length;
+          slides.eq(idx).fadeOut(fadeN).removeClass("active");
+          slides.eq(nextIdx).fadeIn(fadeN).addClass("active");
+          idx = nextIdx;
+          startNum.text(String(idx + 1).padStart(2, "0"));
+        }
 
-  function barStart() {
-    bar
-      .stop(true, true)
-      .css({ width: "0%" })
-      .animate({ width: "100%" }, { duration: dur, easing: "linear" });
+        function prev() {
+          const prevIdx = idx === 0 ? slides.length - 1 : idx - 1;
+          slides.eq(idx).fadeOut(fadeN).removeClass("active");
+          slides.eq(prevIdx).fadeIn(fadeN).addClass("active");
+          idx = prevIdx;
+          startNum.text(String(idx + 1).padStart(2, "0"));
+        }
 
-    clearInterval(barTimer);
-    barTimer = setInterval(function () {
-      bar
-        .stop(true, true)
-        .css({ width: "0%" })
-        .animate({ width: "100%" }, { duration: dur, easing: "linear" });
-    }, dur);
-  }
+        function play() {
+          if (isPlaying) return;
+          isPlaying = true;
 
-  function barStop() {
-    clearInterval(barTimer);
-    barTimer = null;
-    bar.stop(true, false);
-  }
+          const video = slides.eq(idx).find("video").get(0);
+          barReset();
+          video.currentTime = 0;
+          video.play();
 
-  // ====== 자동재생 ======
-  function play() {
-    stop();
-    timer = setInterval(next, dur);
-  }
+          barStart(video, function repeat() {
+            video.pause();
+            next();
+            const nextVideo = slides.eq(idx).find("video").get(0);
+            barReset();
+            nextVideo.currentTime = 0;
+            nextVideo.play();
+            barStart(nextVideo, repeat);
+          });
+        }
 
-  function stop() {
-    if (timer) {
-      clearInterval(timer);
-      timer = null;
-    }
-  }
+        function stop() {
+          isPlaying = false;
+          $("video").each(function () {
+            this.pause();
+          });
+          bar.stop(true);
+        }
 
-  // ====== 버튼 제어 ======
-  $(".next").on("click", function () {
-    stop();
-    barStop();
-    next();
-    play();
-    barReset();
-    barStart();
-  });
+        $(".next").on("click", () => {
+          stop();
+          next();
+          play();
+        });
+        $(".prev").on("click", () => {
+          stop();
+          prev();
+          play();
+        });
 
-  $(".prev").on("click", function () {
-    stop();
-    barStop();
-    prev();
-    play();
-    barReset();
-    barStart();
-  });
+        $(".slider")
+          .on("mouseenter", () => {
+            stop();
+          })
+          .on("mouseleave", () => {
+            play();
+          });
 
-  // ====== 마우스 제어 ======
-  $(".slider")
-    .on("mouseenter", function () {
-      stop();
-      barStop();
-    })
-    .on("mouseleave", function () {
-      play();
-      barReset();
-      barStart();
-    });
+        slides.hide().eq(0).show().addClass("active");
 
-  // ====== 초기 설정 ======
-  slides.hide().eq(0).show();
-  play();
-  barReset();
-  barStart();
-});
+        const firstVideo = slides.eq(0).find("video").get(0);
+        firstVideo.addEventListener("loadedmetadata", () => {
+          play();
+        });
+
+        $("video").each(function () {
+          this.removeAttribute("loop");
+          this.muted = true;
+          this.play().catch(() => {});
+        });
+      });
