@@ -27,6 +27,7 @@
                 /* background-color: skyblue; */
                 margin-top: 100px;
                 font-size: 20px;
+                margin-bottom: 20px;
             }
             .sub2-sec1-outBox,
             .sub2-sec2-outBox,
@@ -59,7 +60,7 @@
                         user-select: none;
                         pointer-events: none;
                         flex-shrink: 0;
-                        transition: all 0.8s linear;
+                        transition: all 0.7s linear;
                     }
                     .sub2-sec1-outBox-imgBox-btn,
                     .sub2-sec2-outBox-imgBox-btn,
