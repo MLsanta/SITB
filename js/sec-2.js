@@ -30,4 +30,3 @@ window.addEventListener('scroll', ()=>{
         sec2.classList.add('active')
     }
 })
-

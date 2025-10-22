@@ -8,10 +8,10 @@
             align-items: center;
             flex-direction: column;
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(50px);
             transition: all 0.5s linear;
         }
-        .sec__2.active{
+            .sec__2.active{
                 opacity: 1;
                 transform: translateY(0);
             }
