@@ -1,0 +1,10 @@
+body {
+    width: 100vw;
+}
+section {
+    width: 1200px;
+    margin: auto;
+}
+.main__text {
+    font-size: 3rem;
+}

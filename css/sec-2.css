@@ -35,7 +35,7 @@
                     margin-bottom: 30px;
                 }
                 .textBox h1{
-                    font-size: 30px;
+                    font-size: 50px;
                     height: 20px;
                 }
                 .outBox2 .imgBox2{
@@ -113,6 +113,7 @@
                             .img5_in span:nth-child(3)::after{
                                 border: none;
                             }
+
                 .sec__2 .textBox, .sec__2 .imgBox2{
                     opacity: 0;
                     transform: translateY(30px);
@@ -125,7 +126,7 @@
                 }
                 .sec__2.active .textBox{transition-delay: 0.4s;}
                 .sec__2.active .imgBox2{transition-delay: 0.6s;}
-                
+
                 .outBox2 .btns{
                     width: 70%;
                     height: 10%;
