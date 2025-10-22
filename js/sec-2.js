@@ -20,3 +20,13 @@ let imgBoxs = document.querySelectorAll('.imgBox2')
                 dots[idx].classList.add('on')
             })
         })
+
+        let sec2 = document.querySelector('.sec__2')
+
+        window.addEventListener('scroll', ()=>{
+            let scrollY = window.scrollY
+
+            if(scrollY + window.innerHeight * 0.8 > sec2.offsetTop){
+                sec2.classList.add('active')
+            }
+        })

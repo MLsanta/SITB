@@ -7,7 +7,14 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.5s linear;
         }
+            .sec__2.active{
+                opacity: 1;
+                transform: translateY(0);
+            }
             .sec__2 .outBox2{
                 width: 100%;
                 height: 100%;
@@ -25,6 +32,7 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    margin-bottom: 30px;
                 }
                 .textBox h1{
                     font-size: 30px;
@@ -105,7 +113,19 @@
                             .img5_in span:nth-child(3)::after{
                                 border: none;
                             }
-
+                .sec__2 .textBox, .sec__2 .imgBox2{
+                    opacity: 0;
+                    transform: translateY(30px);
+                    transition: all 0.8s linear;
+                }
+                .sec__2.active .textBox, 
+                .sec__2.active .imgBox2{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                .sec__2.active .textBox{transition-delay: 0.4s;}
+                .sec__2.active .imgBox2{transition-delay: 0.6s;}
+                
                 .outBox2 .btns{
                     width: 70%;
                     height: 10%;
