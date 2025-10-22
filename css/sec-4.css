@@ -1,0 +1,98 @@
+#section4 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto;
+  text-align: center;
+  font-family: "Pretendard", sans-serif;
+}
+
+#section4 h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+#section4.active h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#section4 h2 .arrow {
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin-left: 5px;
+  color: inherit;
+}
+
+#section4 .desc {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out 0.2s;
+}
+#section4.active .desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.news__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.8s ease-out 0.4s;
+}
+#section4.active .news__cards {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card .text {
+  padding: 18px;
+}
+.card .category {
+  display: block;
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 6px;
+}
+.card h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #222;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card a:hover h3 {
+  color: #111;
+}
