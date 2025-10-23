@@ -87,7 +87,6 @@ const header = document.querySelector(".hd");
 
         window.addEventListener('scroll', ()=>{
             let scrollY = window.scrollY
-            let location = scrollY + window.scrollY / 3  // 섹션의 1/3지점
 
             sections.forEach((item) => {
                 // 시작 위치보다 보이는 섹션의 80%가 내려갔다면
