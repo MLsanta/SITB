@@ -36,21 +36,6 @@ const s__top__4 = sec4.offsetTop;
 window.addEventListener("scroll", () => {
     let sy = window.scrollY;
 
-<<<<<<< HEAD
-    sections.forEach((section, index) => {
-        const top = section.offsetTop;
-        const height = section.offsetHeight;
-        const inView =
-            scrollY >= top - window.innerHeight / 1.5 && scrollY < top + height;
-
-        if (inView) {
-            imageContainers[index].classList.add("img__container__active");
-            textContents[index].classList.add("active");
-        } else {
-            imageContainers[index].classList.remove("img__container__active");
-            textContents[index].classList.remove("active");
-        }
-=======
     if (sy >= s__top__1 - 400 && sy < s__top__1) {
         desc__main__contents1.classList.add("desc__main__contents1__active");
         img__container1.classList.add("img__container__active");
@@ -106,7 +91,6 @@ desc__btn__1.addEventListener("click", () => {
     window.scrollTo({
         top: s__top__1__top - 300,
         behavior: "smooth",
->>>>>>> 381a371e7030288a9eb45f733a86a89def830a29
     });
 });
 const s__top__2__top = document.querySelector(".sec2").offsetTop;

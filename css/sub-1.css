@@ -132,17 +132,14 @@ input[type="radio"]:checked + label.desc__btn__label {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-<<<<<<< HEAD
 
     width: 840px;
     height: 240px;
     transition: all 0.8s ease;
     transform: scale(0.9);
-=======
     transition: all 0.3s ease;
     position: relative;
     z-index: 10;
->>>>>>> 381a371e7030288a9eb45f733a86a89def830a29
 }
 .img__container2 {
     background-image: url(../src/img/2/intro2.jpg);
@@ -237,24 +234,12 @@ input[type="radio"]:checked + label.desc__btn__label {
     /* background-color: #eee; */
 }
 .img__container__active {
-<<<<<<< HEAD
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
-
-    opacity: 1;
-    transform: scale(1);
-=======
     transform: scale(3);
     background-position: 50% 100%;
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
     z-index: 1;
->>>>>>> 381a371e7030288a9eb45f733a86a89def830a29
 }
 .desc__sub__container__active {
     color: white;
