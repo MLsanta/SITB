@@ -17,6 +17,7 @@ body {
 }
 .main__text {
     font-size: 2.3rem;
+    padding-top: 100px;
 }
 .desc__btn {
     width: 1200px;
