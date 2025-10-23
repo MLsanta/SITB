@@ -26,6 +26,7 @@ const desc__main__contents3 = document.querySelector(
 const desc__main__contents4 = document.querySelector(
     ".desc__main__contents4 h1"
 );
+const textContents = document.querySelectorAll(".desc__main__contents");
 
 const s__top__1 = sec1.offsetTop;
 const s__top__2 = sec2.offsetTop;
@@ -84,16 +85,15 @@ window.addEventListener("scroll", () => {
         desc__sub__container4.classList.remove("desc__sub__container__active");
     }
 });
-// 버튼 선택자
-const s__top__1__top = document.querySelector(".sec1").offsetTop; // 이동할 섹션 위치
 
+const s__top__1__top = document.querySelector(".sec1").offsetTop;
 desc__btn__1.addEventListener("click", () => {
     window.scrollTo({
         top: s__top__1__top - 300,
         behavior: "smooth",
     });
 });
-const s__top__2__top = document.querySelector(".sec2").offsetTop; // 이동할 섹션 위치
+const s__top__2__top = document.querySelector(".sec2").offsetTop;
 
 desc__btn__2.addEventListener("click", () => {
     window.scrollTo({
@@ -101,15 +101,14 @@ desc__btn__2.addEventListener("click", () => {
         behavior: "smooth",
     });
 });
-const s__top__3__top = document.querySelector(".sec3").offsetTop; // 이동할 섹션 위치
-
+const s__top__3__top = document.querySelector(".sec3").offsetTop;
 desc__btn__3.addEventListener("click", () => {
     window.scrollTo({
         top: s__top__3__top - 300,
         behavior: "smooth",
     });
 });
-const s__top__4__top = document.querySelector(".sec4").offsetTop; // 이동할 섹션 위치
+const s__top__4__top = document.querySelector(".sec4").offsetTop;
 
 desc__btn__4.addEventListener("click", () => {
     window.scrollTo({
@@ -117,3 +116,15 @@ desc__btn__4.addEventListener("click", () => {
         behavior: "smooth",
     });
 });
+if (window.scrollY > s__top__1__top && window.scrollY < s__top__1__top) {
+    desc__btn__1.checked = true;
+}
+if (window.scrollY > s__top__2__top && window.scrollY < s__top__2__top) {
+    desc__btn__2.checked = true;
+}
+if (window.scrollY > s__top__3__top && window.scrollY < s__top__1__top) {
+    desc__btn__3.checked = true;
+}
+if (window.scrollY > s__top__4__top && window.scrollY < s__top__1__top) {
+    desc__btn__4.checked = true;
+}
