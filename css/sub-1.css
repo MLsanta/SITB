@@ -11,7 +11,7 @@ body {
     width: 1200px;
     height: 250px;
     /* background-color: aliceblue; */
-    margin: auto;
+    margin: 30px auto;
     padding-top: 50px;
     font-size: 2.3rem;
 }
@@ -129,11 +129,14 @@ input[type="radio"]:checked + label.desc__btn__label {
 }
 .img__container1 {
     background-image: url(../src/img/2/intro1.jpg);
-    width: 840px;
-    height: 240px;
-    background-position: center 100%;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    width: 840px;
+    height: 240px;
+    transition: all 0.8s ease;
+    transform: scale(0.9);
     transition: all 0.3s ease;
     position: relative;
     z-index: 10;
