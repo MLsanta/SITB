@@ -1,32 +1,13 @@
-@font-face {
-    font-family: "Godo";
-    src: url("//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2")
-            format("woff2"),
-        url("//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff")
-            format("woff");
-    font-weight: 400;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Godo";
-    src: url("//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2")
-            format("woff2"),
-        url("//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff")
-            format("woff");
-    font-weight: 700;
-    font-display: swap;
-}
-
 .hd {
     width: 100vw;
     height: 50px;
-    padding-top: 40px;
+    padding-top: 10px;
     /* border: 2px solid orange; */
     /* background-color: black; */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    /* margin: auto; */
     position: fixed;
     z-index: 100;
     opacity: 1;
@@ -52,8 +33,8 @@
 }
 
 .nav .logo {
-    width: 180px;
-    height: 120px;
+    width: 240px;
+    height: 160px;
     background-image: url(/SITB/src/img/logo/NHN.png);
     background-size: contain;
     background-position: center;
@@ -63,7 +44,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: 1px 1px 1px rgba(92, 92, 92, 0.726);
+    /* text-shadow: 1px 1px 1px rgba(92, 92, 92, 0.726); */
 }
 
 .nav .menu {
@@ -74,28 +55,28 @@
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    gap: 70px;
+    gap: 50px;
     /* margin-left: 50px; */
 }
 
 .nav a {
     text-decoration: none;
-    text-shadow: 1px 1px 1px rgba(92, 92, 92, 0.726);
+    /* text-shadow: 1px 1px 1px rgba(92, 92, 92, 0.726); */
     color: white;
     position: relative;
     padding-right: 15px;
 }
 
 .nav .menu svg:hover {
-    text-shadow: none;
+    /* text-shadow: none; */
     src: url(../src/img/logo/logo.jpg);
 }
 .nav .menu a:hover {
-    text-shadow: none;
+    /* text-shadow: none; */
     color: black;
 }
 
-.nav a::after {
+.nav .menu a::after {
     content: "";
     width: 6px;
     height: 6px;
@@ -107,7 +88,7 @@
     opacity: 0;
     transition: opacity 0.1s;
 }
-.nav a:hover::after {
+.menu a:hover::after {
     opacity: 1;
 }
 /* .menu{
@@ -121,11 +102,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
     margin-left: auto;
     color: white;
 }
-.header__active {
-    transform: translateY(-200px);
-    opacity: 0;
+
+
+/* .hd:has(.nav> a:hover) svg path {fill: black;} */
+.hd:has(.menu a:hover) .menu a,
+.hd:has(.menu a:hover) .ic { color: rgb(0, 0, 0); }
+.hd:has(.menu a:hover) .nav > a svg path {fill: rgb(0, 0, 0)}
+
+
+/*sub__page */
+
+.sub__page .hd .menu a {
+    color: black;
 }
+
+
+.sub__page .hd .nav > a svg path {
+    fill: black;
+}
+
+
+.sub__page .hd .ic .bi{
+    color: black;
+}
+
+.page--1 .hd .menu:nth-child(1){
+    font-weight: bold;
+}
+
