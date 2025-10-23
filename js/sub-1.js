@@ -26,6 +26,7 @@ const desc__main__contents3 = document.querySelector(
 const desc__main__contents4 = document.querySelector(
     ".desc__main__contents4 h1"
 );
+const textContents = document.querySelectorAll(".desc__main__contents");
 
 const s__top__1 = sec1.offsetTop;
 const s__top__2 = sec2.offsetTop;
