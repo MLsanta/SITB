@@ -30,7 +30,7 @@
     position: fixed;
     z-index: 100;
     opacity: 1;
-    transition: all 0.4s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .hd--hidden {
@@ -80,8 +80,8 @@
 
 .nav a {
     text-decoration: none;
-    text-shadow: 1px 1px 1px rgba(92, 92, 92, 0.726);
-    color: white;
+    /* text-shadow: 1px 1px 1px rgba(92, 92, 92, 0.726); */
+    color: black;
     position: relative;
     padding-right: 15px;
 }
@@ -124,8 +124,4 @@
     font-size: 18px;
     margin-left: auto;
     color: white;
-}
-.header__active {
-    transform: translateY(-200px);
-    opacity: 0;
 }

@@ -1,0 +1,28 @@
+body {
+    width: 100vw;
+}
+section {
+    width: 1200px;
+    margin: auto;
+}
+.main__text {
+    font-size: 3rem;
+    padding-top: 100px;
+}
+.adress__container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    padding-top: 30px;
+}
+span {
+    color: #333;
+}
+.map__container {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+.map__discription {
+    padding-left: 40px;
+}
