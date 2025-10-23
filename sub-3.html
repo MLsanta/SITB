@@ -13,29 +13,44 @@
     
   </head>
   <body>
-    <section id="news">
-      <div class="title">
+    <body class ="sub-3">
+    <header class="hd" >
+        <div class="nav">
+            <svg class="transition-color" width="78" height="18" viewBox="0 0 78 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_26652_4783)"><path fill="white" d="M41.915 17.4308H45.9302V0.427734H41.915V6.97854H34.6459V0.427734H30.6306V17.4308H34.6459V11.1861V10.8604L41.915 10.88V11.1861V17.4308Z"></path><path fill="white" d="M11.2098 10.6367L3.61491 0L0 1.87222V17.4427H3.92891V7.19058L11.8849 18H11.9006L15.1779 16.273V0.443524H11.2098V10.6367Z"></path><path fill="white" d="M65.3117 7.19058L73.2677 18H73.2834L76.5607 16.273V0.443524H72.5926V10.6367L64.9977 0L61.3828 1.87222V17.4427H65.3117V7.19058Z"></path></g><defs><clipPath id="clip0_26652_4783"><rect width="76.5608" height="18" fill="white"></rect></clipPath></defs></svg>
+            <div class="menu">
+                <a href="sub-1.html" class="transition-color">회사소개</a>
+                <a href="sub-2.html" >서비스</a>
+                <a href="sub-3.html" >홍보</a>
+                <a href="sub-4.html" >투자정보</a>
+            </div>
+        </div>
+        <div class="ic"><i class="bi bi-globe"></i></div>
+    </header>
+    
+ <section class="news">
+      <div class="tit">
         <h2>우리의 행동이 모여<br />새로운 이야기가 됩니다</h2>
       </div>
 
-      <input type="radio" name="page" id="page1" checked />
-      <input type="radio" name="page" id="page2" />
-
-      <div class="page page1">
-        <div class="news__cards" id="page1Cards"></div>
+      <!-- 페이지 1 -->
+      <div class="page page--1 active">
+        <div class="wrap" id="wrap--1"></div>
       </div>
 
-      <div class="page page2">
-        <div class="news__cards" id="page2Cards"></div>
+      <!-- 페이지 2 -->
+      <div class="page page--2">
+        <div class="wrap" id="wrap--2"></div>
       </div>
 
-      <div class="pagination">
-        <div class="arrow disabled" id="prevBtn">‹</div>
-        <label for="page1">1</label>
-        <label for="page2">2</label>
-        <div class="arrow" id="nextBtn">›</div>
+      <!-- 페이지 컨트롤 -->
+      <div class="nav">
+        <div class="arrow prev off" id="btnPrev">‹</div>
+        <div class="num on" data-page="1">1</div>
+        <div class="num" data-page="2">2</div>
+        <div class="arrow next" id="btnNext">›</div>
       </div>
     </section>
+
 
     <!-- 푸터 시작 -->
     <footer>
