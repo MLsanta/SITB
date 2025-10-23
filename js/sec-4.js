@@ -7,7 +7,7 @@ function revealSection4() {
   const winH = window.innerHeight;
 
   if (sy + winH >= s4Top + s4Height / 3) {
-    sec4.classList.add("active");
+    sec4.classList.add("section4--active");
     window.removeEventListener("scroll", revealSection4);
   }
 }
