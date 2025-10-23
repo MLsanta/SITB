@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/sec-2.css">
     <link rel="stylesheet" href="./css/sec-1.css">
+    <link rel="stylesheet" href="./css/sec-2.css">
+    <link rel="stylesheet" href="./css/sec-4.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/reset.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -28,15 +29,16 @@
         </div>
         <div class="ic"><i class="bi bi-globe"></i></div>
     </header>
+    
     <section id="section1">
+
       <div class="slider">
         <!-- slide 1 -->
-        <div class="slide1">
+        <div class="slide active">
           <video
             src="./src/video/1.home/mainBanner01.mp4"
             autoplay
             muted
-            loop
             playsinline
           ></video>
           <div class="Txt">
@@ -46,12 +48,11 @@
         </div>
 
         <!-- slide 2 -->
-        <div class="slide2">
+        <div class="slide">
           <video
             src="./src/video/1.home/mainBanner02.mp4"
             autoplay
             muted
-            loop
             playsinline
           ></video>
           <div class="Txt">
@@ -61,16 +62,15 @@
         </div>
 
         <!-- slide 3 -->
-        <div class="slide3">
+        <div class="slide">
           <video
             src="./src/video/1.home/mainBanner03.mp4"
             autoplay
             muted
-            loop
             playsinline
           ></video>
           <div class="Txt">
-            <span>CAREERS<i class="spin">→</i></span>
+            <span>CAREERS<i>→</i></span>
             <h1>
               더 나은 세상을 만들어갈<br /><span>Next Player</span>를 찾습니다
             </h1>
@@ -85,21 +85,12 @@
         <span class="end">03</span>
 
         <div class="btn">
-          <button class="btn prev">‹</button>
-          <button class="btn next">›</button>
-        </div>
-      </div>
-      <div class="auto">
-        <span class="idx cur">01</span>
-        <span class="sep"> / </span>
-        <span class="idx total">03</span>
-        <div class="btn">
-          <button class="btn prev" aria-label="이전">‹</button>
-          <button class="btn next" aria-label="다음">›</button>
+          <button class="prev">‹</button>
+          <button class="next">›</button>
         </div>
       </div>
     </section>
-    <script src="./js/sec-1.js"></script>
+
     <section class="sec__2">
         <div class="outBox2">
             <div class="textBox">
@@ -224,6 +215,49 @@
             </div>
         </div>
     </section>
+<!-- 섹션4 -->
+    <section id="section4">
+      <h2>
+        NHN의 사람, 기술, 문화 이야기
+        <a href="https://inside.nhn.com/" target="_blank" class="arrow">↗</a>
+      </h2>
+      <p class="desc">공식 뉴스룸 'INSIDE NHN'에서 만나보세요.</p>
+
+      <div class="news__cards">
+        <article class="card">
+          <a href="https://inside.nhn.com/service/282" target="_blank">
+            <img src="./src/img/1home/homelastimg1.jpg" alt="팀사진" />
+            <div class="text">
+              <span class="category">사람&문화</span>
+              <h3>[Plays!] 우리가 AI를 플레이하는 법 – NHN의 AI 플레이어</h3>
+            </div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="https://inside.nhn.com/service/281" target="_blank">
+            <img src="./src/img/1home/homelastimg2.jpg" alt="직원사진" />
+            <div class="text">
+              <span class="category">서비스</span>
+              <h3>
+                브랜드부터 UI·UX까지 NHN커머스의 정체성을 만드는 디자인팀 이야기
+              </h3>
+            </div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="https://inside.nhn.com/service/278" target="_blank">
+            <img src="./src/img/1home/homelastimg3.jpg" alt="디자인어워드" />
+            <div class="text">
+              <span class="category">기업</span>
+              <h3>NHN 리브랜딩, 글로벌 디자인 어워드 2관왕 달성</h3>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
     <footer>
       <div class="out__container">
       <div class="footer__box">
@@ -257,11 +291,15 @@
 </div>
     </footer>
 
+
+
+    <script src="./js/header.js"></script>    
+    
     <script src="./js/sec-1.js"></script>
 
-    <script src="./js/header.js"></script>
-
     <script src="./js/sec-2.js"></script>
+
+    <script src="./js/sec-4.js"></script>
 
   </body>
 </html>

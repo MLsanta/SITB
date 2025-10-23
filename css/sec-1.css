@@ -57,7 +57,7 @@
   font-size: 55px;
   line-height: 70px;
 }
-/* === 중앙 하단 컨트롤러 === */
+
 #section1 .control {
   position: absolute;
   left: 300px;
@@ -73,7 +73,6 @@
   font-size: 15px;
 }
 
-/* 가운데 구분선 */
 #section1 .outBar {
   width: 100px;
   height: 2px;
@@ -86,13 +85,13 @@
   height: 100%;
   background: white;
 }
-/* 버튼 묶음 */
+
 #section1 .control .btn {
   display: flex;
   gap: 10px;
   font-size: 27px;
 }
-/* 좌우 화살표 버튼 */
+
 #section1 .control button {
   border: none;
   border-radius: 50%;
