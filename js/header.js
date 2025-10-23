@@ -1,14 +1,11 @@
 const header = document.querySelector(".hd");
 
-let lastScrollY = 0;
+window.addEventListener("scroll", () => {
+    let sy = window.scrollY;
 
-window.addEventListener('scroll', ()=> {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY) {
-        header.classList.add("hd--hidden");
-    } else{
-        header.classList.remove("hd--hidden");
+    if (sy > 30) {
+        header.classList.add("header__active");
+    } else {
+        header.classList.remove("header__active");
     }
-    lastScrollY = currentScrollY;
-})
+});
