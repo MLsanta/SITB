@@ -1,15 +1,18 @@
-const sec4 = document.querySelector("#section4");
-const s4Top = sec4.offsetTop;
-const s4Height = sec4.offsetHeight;
+const title = document.querySelector(".section4__title");
+const desc = document.querySelector(".section4__desc");
+const news = document.querySelector(".news");
 
 function revealSection4() {
-  const sy = window.scrollY;
   const winH = window.innerHeight;
 
-  if (sy + winH >= s4Top + s4Height / 3) {
-    sec4.classList.add("section4--active");
-    window.removeEventListener("scroll", revealSection4);
-  }
+  const titleTop = title.getBoundingClientRect().top;
+  const descTop = desc.getBoundingClientRect().top;
+  const newsTop = news.getBoundingClientRect().top;
+
+  // 각 요소별로 화면에 들어오면 active 클래스 추가
+  if (titleTop < winH * 0.9) title.classList.add("active");
+  if (descTop < winH * 0.9) desc.classList.add("active");
+  if (newsTop < winH * 0.9) news.classList.add("active");
 }
 
 window.addEventListener("scroll", revealSection4);
