@@ -83,6 +83,22 @@
     padding: 18px;
 }
 
+/* 스크롤할 때 */
+.section4__title,
+.section4__desc,
+.news {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.section4__title.active,
+.section4__desc.active,
+.news.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .news__category {
     display: block;
     font-size: 0.9rem;
