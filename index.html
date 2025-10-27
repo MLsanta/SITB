@@ -22,59 +22,68 @@
         <div class="nav">
             <svg class="transition-color" width="78" height="18" viewBox="0 0 78 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_26652_4783)"><path fill="white" d="M41.915 17.4308H45.9302V0.427734H41.915V6.97854H34.6459V0.427734H30.6306V17.4308H34.6459V11.1861V10.8604L41.915 10.88V11.1861V17.4308Z"></path><path fill="white" d="M11.2098 10.6367L3.61491 0L0 1.87222V17.4427H3.92891V7.19058L11.8849 18H11.9006L15.1779 16.273V0.443524H11.2098V10.6367Z"></path><path fill="white" d="M65.3117 7.19058L73.2677 18H73.2834L76.5607 16.273V0.443524H72.5926V10.6367L64.9977 0L61.3828 1.87222V17.4427H65.3117V7.19058Z"></path></g><defs><clipPath id="clip0_26652_4783"><rect width="76.5608" height="18" fill="white"></rect></clipPath></defs></svg>
             <div class="menu">
-              <a href="sub-1.html" class="transition-color">회사소개</a>
-
-              <a href="sub-2.html" class="transition-color">서비스</a>
-              <a href="sub-3.html" class="transition-color">홍보</a>
-              <a href="sub-4.html" class="transition-color">투자정보</a>
-              <a href="sub-5.html" class="transition-color">오시는길</a>
+                <a href="sub-1.html" class="transition-color">회사소개</a>
+                <a href="sub-2.html" class="transition-color">서비스</a>
+                <a href="sub-3.html" class="transition-color">홍보</a>
+                <a href="sub-4.html" class="transition-color">투자정보</a>
+                <a href="sub-5.html" class="transition-color">오시는 길</a>
             </div>
         </div>
         <div class="ic"><i class="bi bi-globe"></i></div>
     </header>
     
-    <section id="section1">
-
-      <div class="slider">
-        <!-- slide 1 -->
-        <div class="slide active">
+ <section class="section1">
+      <!-- ===== 슬라이드 ===== -->
+      <div class="section1__slider">
+        <div class="section1__slide section1__slide--active">
           <video
             src="./src/video/1.home/mainBanner01.mp4"
             autoplay
             muted
             playsinline
+            class="section1__video"
           ></video>
-          <div class="Txt">
-            <span>회사소개 <i>→</i></span>
-            <h1>우리의 연결로<br /><span>만드는 새로운 내일</span></h1>
+          <div class="section1__text">
+            <span class="section1__label"
+              >회사소개 <i class="section1__icon">→</i></span
+            >
+            <h1 class="section1__title">
+              우리의 연결로<br /><span>만드는 새로운 내일</span>
+            </h1>
           </div>
         </div>
 
-        <!-- slide 2 -->
-        <div class="slide">
+        <div class="section1__slide">
           <video
             src="./src/video/1.home/mainBanner02.mp4"
             autoplay
             muted
             playsinline
+            class="section1__video"
           ></video>
-          <div class="Txt">
-            <span>ESG<i>→</i></span>
-            <h1>함께 성장하며 지속가능한<br /><span>미래를 만듭니다</span></h1>
+          <div class="section1__text">
+            <span class="section1__label"
+              >ESG<i class="section1__icon">→</i></span
+            >
+            <h1 class="section1__title">
+              함께 성장하며 지속가능한<br /><span>미래를 만듭니다</span>
+            </h1>
           </div>
         </div>
 
-        <!-- slide 3 -->
-        <div class="slide">
+        <div class="section1__slide">
           <video
             src="./src/video/1.home/mainBanner03.mp4"
             autoplay
             muted
             playsinline
+            class="section1__video"
           ></video>
-          <div class="Txt">
-            <span>CAREERS<i>→</i></span>
-            <h1>
+          <div class="section1__text">
+            <span class="section1__label"
+              >CAREERS<i class="section1__icon">→</i></span
+            >
+            <h1 class="section1__title">
               더 나은 세상을 만들어갈<br /><span>Next Player</span>를 찾습니다
             </h1>
           </div>
@@ -82,17 +91,19 @@
       </div>
 
       <!-- 컨트롤 -->
-      <div class="control">
-        <span class="start">01</span>
-        <div class="outBar"><div class="bar"></div></div>
-        <span class="end">03</span>
+<div class="section1__control">
+  <span class="section1__count section1__count--current">01</span>
+  <div class="section1__progress">
+    <div class="section1__bar"></div>
+  </div>
+  <span class="section1__count section1__count--total">03</span>
 
-        <div class="btn">
-          <button class="prev">‹</button>
-          <button class="next">›</button>
-        </div>
-      </div>
-    </section>
+  <div class="section1__buttons">
+    <button class="section1__btn section1__btn--prev">‹</button>
+    <button class="section1__btn section1__btn--next">›</button>
+  </div>
+</div>
+</section>
 
     <section class="sec__2">
         <div class="outBox2">
@@ -184,12 +195,12 @@
                     </div>
                     <div class="inText2 img5_in">
                         <span>ticketlink</span>
-                        <spanp>Bugs</spanp>
+                        <span>Bugs</span>
                         <span>comico & pocket comics</span><br>
                         <span>여행박사</span>
                         <span>iam School</span>
                         <span>핑크다이어리</span>
-                        <spanp>지하철종결자</spanp>
+                        <span>지하철종결자</span>
         
                     </div>
                 </div>
@@ -227,6 +238,73 @@
         <source src="../SITB/src/video/1.home/mainBanner03.mp4" type="video/mp4">
       </video>
     </section>
+<!-- 섹션4 -->
+    <section class="section4" id="section4">
+      <h2 class="section4__title">
+        NHN의 사람, 기술, 문화 이야기
+        <a
+          href="https://inside.nhn.com/"
+          target="_blank"
+          class="section4__arrow"
+          >↗</a
+        >
+      </h2>
+      <p class="section4__desc">공식 뉴스룸 'INSIDE NHN'에서 만나보세요.</p>
+
+      <div class="news">
+        <article class="news__card">
+          <a
+            href="https://inside.nhn.com/service/282"
+            target="_blank"
+            class="news__link"
+          >
+            <img src="./src/img/1home/homelastimg1.jpg" alt="팀사진" class="news__img" />
+            <div class="news__text">
+              <span class="news__category">사람&문화</span>
+              <h3 class="news__title">
+                [Plays!] 우리가 AI를 플레이하는 법 – NHN의 AI 플레이어
+              </h3>
+            </div>
+          </a>
+        </article>
+
+        <article class="news__card">
+          <a
+            href="https://inside.nhn.com/service/281"
+            target="_blank"
+            class="news__link"
+          >
+            <img src="./src/img/1home/homelastimg2.jpg" alt="직원사진" class="news__img" />
+            <div class="news__text">
+              <span class="news__category">서비스</span>
+              <h3 class="news__title">
+                브랜드부터 UI·UX까지 NHN커머스의 정체성을 만드는 디자인팀 이야기
+              </h3>
+            </div>
+          </a>
+        </article>
+
+        <article class="news__card">
+          <a
+            href="https://inside.nhn.com/service/278"
+            target="_blank"
+            class="news__link"
+          >
+            <img
+              src="./src/img/1home/homelastimg3.jpg"
+              alt="디자인어워드"
+              class="news__img"
+            />
+            <div class="news__text">
+              <span class="news__category">기업</span>
+              <h3 class="news__title">
+                NHN 리브랜딩, 글로벌 디자인 어워드 2관왕 달성
+              </h3>
+            </div>
+          </a>
+        </article>
+    </div>
+    </section>
     <footer>
       <div class="out__container">
       <div class="footer__box">
@@ -259,16 +337,9 @@
   <span>Team Simple Is The Best. All rights reserved.</span>
 </div>
     </footer>
-
-
-
     <script src="./js/header.js"></script>    
-    
     <script src="./js/sec-1.js"></script>
-
     <script src="./js/sec-2.js"></script>
-
     <script src="./js/sec-3.js"></script>
-
   </body>
 </html>

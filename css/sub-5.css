@@ -26,3 +26,20 @@ span {
 .map__discription {
     padding-left: 40px;
 }
+.pin__container {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.img__container {
+    width: 100px;
+    height: 100px;
+    background-image: url(../src/img/logo/lineaca_logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

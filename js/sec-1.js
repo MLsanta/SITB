@@ -1,71 +1,67 @@
 $(function () {
-  const slides = $(".slide");
-  const bar = $(".bar");
-  const startNum = $(".start");
+  const $slides = $(".section1__slide");
+  const $bar = $(".section1__bar");
+  const $startNum = $(".section1__count--current");
   let idx = 0;
   let isPlaying = false;
-  const fadeN = 1000;
+  const fadeSpeed = 1000;
   let frameId = null;
 
-  function barReset() {
+  function resetBar() {
     cancelAnimationFrame(frameId);
-    bar.css({ width: "0%" });
+    $bar.css({ width: "0%" });
   }
 
-  function barStart(video, callback) {
+  function animateBar(video, callback) {
     let startTime = null;
-
-    function updateBar(now) {
+    function update(now) {
       if (!startTime) startTime = now;
       const elapsed = (now - startTime) / 1000;
       const progress = Math.min((elapsed / video.duration) * 100, 100);
-      bar.css("width", progress + "%");
-
+      $bar.css("width", progress + "%");
       if (progress < 100 && !video.paused) {
-        frameId = requestAnimationFrame(updateBar);
-      } else {
-        callback && callback();
-      }
+        frameId = requestAnimationFrame(update);
+      } else callback && callback();
     }
-    frameId = requestAnimationFrame(updateBar);
+    frameId = requestAnimationFrame(update);
   }
 
-  function next() {
-    const nextIdx = (idx + 1) % slides.length;
-    slides.eq(idx).fadeOut(fadeN).removeClass("active");
-    slides.eq(nextIdx).fadeIn(fadeN).addClass("active");
+  function goNext() {
+    const nextIdx = (idx + 1) % $slides.length;
+    $slides.eq(idx).fadeOut(fadeSpeed).removeClass("section1__slide--active");
+    $slides.eq(nextIdx).fadeIn(fadeSpeed).addClass("section1__slide--active");
     idx = nextIdx;
-    startNum.text(String(idx + 1).padStart(2, "0"));
+    $startNum.text(String(idx + 1).padStart(2, "0"));
   }
 
-  function prev() {
-    const prevIdx = idx === 0 ? slides.length - 1 : idx - 1;
-    slides.eq(idx).fadeOut(fadeN).removeClass("active");
-    slides.eq(prevIdx).fadeIn(fadeN).addClass("active");
+  function goPrev() {
+    const prevIdx = idx === 0 ? $slides.length - 1 : idx - 1;
+    $slides.eq(idx).fadeOut(fadeSpeed).removeClass("section1__slide--active");
+    $slides.eq(prevIdx).fadeIn(fadeSpeed).addClass("section1__slide--active");
     idx = prevIdx;
-    startNum.text(String(idx + 1).padStart(2, "0"));
+    $startNum.text(String(idx + 1).padStart(2, "0"));
   }
 
   function play() {
     if (isPlaying) return;
     isPlaying = true;
 
-    const video = slides.eq(idx).find("video").get(0);
-    barReset();
+    const video = $slides.eq(idx).find("video").get(0);
+    resetBar();
     video.currentTime = 0;
 
     video.addEventListener("playing", function onPlay() {
       video.removeEventListener("playing", onPlay);
-      barStart(video, function repeat() {
+      animateBar(video, function loop() {
         video.pause();
-        next();
-        const nextVideo = slides.eq(idx).find("video").get(0);
-        barReset();
+        goNext();
+        const nextVideo = $slides.eq(idx).find("video").get(0);
+        resetBar();
         nextVideo.currentTime = 0;
 
         nextVideo.addEventListener("playing", function onNextPlay() {
           nextVideo.removeEventListener("playing", onNextPlay);
-          barStart(nextVideo, repeat);
+          animateBar(nextVideo, loop);
         });
         nextVideo.play();
       });
@@ -80,30 +76,23 @@ $(function () {
     $("video").each(function () {
       this.pause();
     });
-    bar.stop(true);
+    $bar.stop(true);
   }
 
-  $(".next").on("click", () => {
+  $(".section1__btn--next").on("click", () => {
     stop();
-    next();
+    goNext();
     play();
   });
-  $(".prev").on("click", () => {
+
+  $(".section1__btn--prev").on("click", () => {
     stop();
-    prev();
+    goPrev();
     play();
   });
 
-  slides.hide().eq(0).show().addClass("active");
+  $slides.hide().eq(0).show().addClass("section1__slide--active");
 
-  const firstVideo = slides.eq(0).find("video").get(0);
-  firstVideo.addEventListener("loadedmetadata", () => {
-    play();
-  });
-
-  $("video").each(function () {
-    this.removeAttribute("loop");
-    this.muted = true;
-    this.play().catch(() => {});
-  });
+  const firstVideo = $slides.eq(0).find("video").get(0);
+  firstVideo.addEventListener("loadedmetadata", () => play());
 });
