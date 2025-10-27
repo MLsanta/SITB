@@ -108,12 +108,14 @@
     color: white;
 }
 
-
 /* .hd:has(.nav> a:hover) svg path {fill: black;} */
 .hd:has(.menu a:hover) .menu a,
-.hd:has(.menu a:hover) .ic { color: rgb(0, 0, 0); }
-.hd:has(.menu a:hover) .nav > a svg path {fill: rgb(0, 0, 0)}
-
+.hd:has(.menu a:hover) .ic {
+    color: rgb(0, 0, 0);
+}
+.hd:has(.menu a:hover) .nav > a svg path {
+    fill: rgb(0, 0, 0);
+}
 
 /*sub__page */
 
@@ -121,17 +123,18 @@
     color: black;
 }
 
-
 .sub__page .hd .nav > a svg path {
     fill: black;
 }
 
-
-.sub__page .hd .ic .bi{
+.sub__page .hd .ic .bi {
     color: black;
 }
 
 /* .page--1 .hd .menu:nth-child(1){
     font-weight: bold;
 } */
-
+.header__active {
+    transform: translateY(-100px);
+    opacity: 0;
+}
