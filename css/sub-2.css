@@ -251,6 +251,7 @@
                                 justify-content: center;
                                 align-items: center;
                             }
-                .footer__etc  a{
+                footer  a{
                     font-size: 1rem;
-                }
+                } 
+

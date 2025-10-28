@@ -1,0 +1,125 @@
+
+.se1{
+    width: 45%;
+    height: 70px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0 auto;
+    /* padding-top: -10px; */
+}
+
+.se1 h1{
+    /* padding-top: 100px; */
+    font-size: 24px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.btn__box{
+    width: 45%;
+    height: 100px;
+    /* padding-top: 80px; */
+    /* background-color: rgb(55, 162, 255); */
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    gap: 10px;
+}
+
+.sub4__btn1, .sub4__btn2 {
+    background: none;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+    color: #333;
+    font-size: 10px;
+}
+
+.sub4__btn1.active,
+.sub4__btn2.active{
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+.sub4__sec--1,
+.sub4__sec--2{
+    display: none;
+    width: 45%;
+    margin: 0 auto;
+}
+
+.sub4__sec--1.active,
+.sub4__sec--2.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.sub4__sec--1 table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    border-top: 2px solid #333;
+}
+
+.sub4__sec--1 th, .sub4__sec--1 td{
+    padding: 15px 10px;
+    border-bottom: 1px solid #f7f7f7;
+    text-align: center;
+    
+} 
+
+.sub4__sec--1 th{
+    background-color: #ffffff;
+    font-weight: bold;
+}
+
+.sub4__sec--1 th:nth-child(3),
+.sub4__sec--1 td:nth-child(3){
+    text-align:left
+
+}
+
+.sub4__sec--2.sub4__btn1.active{
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sub4__sec--2 table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    border-top: 2px solid #333;
+}
+
+.sub4__sec--2 table + table {
+    display: none;
+}
+
+
+.sub4__sec--2 th, .sub4__sec--2 td {
+    border: 1px solid #eee;
+    padding: 12px;
+    text-align: right;
+}    
+
+.sub4__sec--2 th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.sub4__sec--2 th:first-child,
+.sub4__sec--2 td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
