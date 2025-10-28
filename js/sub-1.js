@@ -87,22 +87,35 @@ window.addEventListener("scroll", () => {
         desc__sub__container1.classList.remove("desc__sub__container__active");
     }
 
-    // 섹션 2
+    // ✅ 섹션 2
     if (sy >= s__top__2 - 400 && sy < s__top__3 - 400) {
-        startTyping();
-        desc__main__contents2.classList.add("desc__main__contents__active");
+        if (!typingStarted) {
+            typingStarted = true;
+            typingInterval = setInterval(typing, 200);
+        }
+        document
+            .querySelector(".desc__main__contents2 h1")
+            .classList.add("desc__main__contents__active");
         img__container2.classList.add("img__container__active");
         desc__sub__container2.classList.add("desc__sub__container__active");
     } else {
-        stopTyping();
-        desc__main__contents2.classList.remove("desc__main__contents__active");
+        if (typingStarted) {
+            clearInterval(typingInterval);
+            typingStarted = false;
+            typingInterval = null;
+        }
+        document
+            .querySelector(".desc__main__contents2 h1")
+            .classList.remove("desc__main__contents__active");
         img__container2.classList.remove("img__container__active");
         desc__sub__container2.classList.remove("desc__sub__container__active");
     }
 
-    // 섹션 3
+    // ✅ 섹션 3
     if (sy >= s__top__3 - 400 && sy < s__top__4 - 400) {
-        desc__main__contents3.classList.add("desc__main__contents__active");
+        document
+            .querySelector(".desc__main__contents3 h1")
+            .classList.add("desc__main__contents__active");
         img__container3.classList.add("img__container__active");
         desc__sub__container3.classList.add("desc__sub__container__active");
     } else {
@@ -111,9 +124,11 @@ window.addEventListener("scroll", () => {
         desc__sub__container3.classList.remove("desc__sub__container__active");
     }
 
-    // 섹션 4
+    // ✅ 섹션 4 (마지막이므로 다음 섹션 없음)
     if (sy >= s__top__4 - 400) {
-        desc__main__contents4.classList.add("desc__main__contents__active");
+        document
+            .querySelector(".desc__main__contents4 h1")
+            .classList.add("desc__main__contents__active");
         img__container4.classList.add("img__container__active");
         desc__sub__container4.classList.add("desc__sub__container__active");
     } else {
