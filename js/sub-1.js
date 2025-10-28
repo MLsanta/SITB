@@ -28,6 +28,19 @@ const desc__main__contents4 = document.querySelector(
 );
 const textContents = document.querySelectorAll(".desc__main__contents");
 
+const content = "오늘을 만드는 기술";
+const desc__class1 = document.querySelector(".desc__class--1");
+let index = 0;
+let typingStarted = false;
+
+function typing() {
+    desc__class1.textContent += content[index++];
+    if (index > content.length) {
+        desc__class1.textContent = "";
+        index = 0;
+    }
+}
+
 const s__top__1 = sec1.offsetTop;
 const s__top__2 = sec2.offsetTop;
 const s__top__3 = sec3.offsetTop;
@@ -36,7 +49,8 @@ const s__top__4 = sec4.offsetTop;
 window.addEventListener("scroll", () => {
     let sy = window.scrollY;
 
-    if (sy >= s__top__1 - 400 && sy < s__top__1) {
+    // ✅ 섹션 1
+    if (sy >= s__top__1 - 400 && sy < s__top__2 - 400) {
         desc__main__contents1.classList.add("desc__main__contents1__active");
         img__container1.classList.add("img__container__active");
         desc__sub__container1.classList.add("desc__sub__container__active");
@@ -45,20 +59,33 @@ window.addEventListener("scroll", () => {
         img__container1.classList.remove("img__container__active");
         desc__sub__container1.classList.remove("desc__sub__container__active");
     }
-    if (sy >= s__top__2 - 500 && sy < s__top__2) {
+
+    // ✅ 섹션 2
+    if (sy >= s__top__2 - 400 && sy < s__top__3 - 400) {
+        if (!typingStarted) {
+            typingStarted = true;
+            typingInterval = setInterval(typing, 200);
+        }
         document
             .querySelector(".desc__main__contents2 h1")
             .classList.add("desc__main__contents__active");
         img__container2.classList.add("img__container__active");
         desc__sub__container2.classList.add("desc__sub__container__active");
     } else {
+        if (typingStarted) {
+            clearInterval(typingInterval);
+            typingStarted = false;
+            typingInterval = null;
+        }
         document
             .querySelector(".desc__main__contents2 h1")
             .classList.remove("desc__main__contents__active");
         img__container2.classList.remove("img__container__active");
         desc__sub__container2.classList.remove("desc__sub__container__active");
     }
-    if (sy >= s__top__3 - 500 && sy < s__top__3) {
+
+    // ✅ 섹션 3
+    if (sy >= s__top__3 - 400 && sy < s__top__4 - 400) {
         document
             .querySelector(".desc__main__contents3 h1")
             .classList.add("desc__main__contents__active");
@@ -71,7 +98,9 @@ window.addEventListener("scroll", () => {
         img__container3.classList.remove("img__container__active");
         desc__sub__container3.classList.remove("desc__sub__container__active");
     }
-    if (sy >= s__top__4 - 500 && sy < s__top__4) {
+
+    // ✅ 섹션 4 (마지막이므로 다음 섹션 없음)
+    if (sy >= s__top__4 - 400) {
         document
             .querySelector(".desc__main__contents4 h1")
             .classList.add("desc__main__contents__active");
