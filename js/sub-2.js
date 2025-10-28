@@ -1,97 +1,97 @@
-const header = document.querySelector(".hd");
+// const header = document.querySelector(".hd");
 
-        let lastScrollY = 0;
+//         let lastScrollY = 0;
 
-        window.addEventListener('scroll', ()=> {
-            const currentScrollY = window.scrollY;
+//         window.addEventListener('scroll', ()=> {
+//             const currentScrollY = window.scrollY;
 
-            if (currentScrollY > lastScrollY) {
-                header.classList.add("hd--hidden");
-            } else{
-                header.classList.remove("hd--hidden");
-            }
-            lastScrollY = currentScrollY;
-        })
+//             if (currentScrollY > lastScrollY) {
+//                 header.classList.add("hd--hidden");
+//             } else{
+//                 header.classList.remove("hd--hidden");
+//             }
+//             lastScrollY = currentScrollY;
+//         })
 
-        // 서브2 자바스크립트
+// 서브2 자바스크립트
 
-        document.querySelectorAll('.imgBox').forEach((item) => {
-            let imgs = item.querySelectorAll('img')
-            let leftBtn = item.querySelector('.leftBtn')
-            let rightBtn = item.querySelector('.rightBtn')
-            let changePage = item.querySelector('.changePage')
-            let page = item.querySelector('.page')
-            
-            let idx = 0
-            let down = false;
-            let startX = 0
-            let total = imgs.length
-            page.textContent = String(total).padStart(2, '0')
+document.querySelectorAll(".imgBox").forEach((item) => {
+    let imgs = item.querySelectorAll("img");
+    let leftBtn = item.querySelector(".leftBtn");
+    let rightBtn = item.querySelector(".rightBtn");
+    let changePage = item.querySelector(".changePage");
+    let page = item.querySelector(".page");
 
-            show(0)
+    let idx = 0;
+    let down = false;
+    let startX = 0;
+    let total = imgs.length;
+    page.textContent = String(total).padStart(2, "0");
 
-            // 표시 함수
-            function show(a) {
-                let offset = -a * 100;
-                imgs.forEach((img, i) => {
-                    img.style.transform = `translateX(${offset}%)`
-                })
-                changePage.textContent = String(a + 1).padStart(2, '0')
-            }
+    show(0);
 
-            // 버튼 클릭 시
-            leftBtn.addEventListener('click', () => {
-                if(idx > 0){
-                    idx --
-                    show(idx);
-                }
-            })
+    // 표시 함수
+    function show(a) {
+        let offset = -a * 100;
+        imgs.forEach((img, i) => {
+            img.style.transform = `translateX(${offset}%)`;
+        });
+        changePage.textContent = String(a + 1).padStart(2, "0");
+    }
 
-            rightBtn.addEventListener('click', () => {
-                if(idx < total - 1){
-                    idx ++ 
-                    show(idx);
-                }
-            })
+    // 버튼 클릭 시
+    leftBtn.addEventListener("click", () => {
+        if (idx > 0) {
+            idx--;
+            show(idx);
+        }
+    });
 
-            // 드래그
-            item.addEventListener('mousedown', (e) => {
-                down = true;
-                startX = e.clientX
-                item.classList.add('move')
-            })
+    rightBtn.addEventListener("click", () => {
+        if (idx < total - 1) {
+            idx++;
+            show(idx);
+        }
+    });
 
-            window.addEventListener('mouseup', () => {
-                down = false;
-                item.classList.remove('move')
-            })
+    // 드래그
+    item.addEventListener("mousedown", (e) => {
+        down = true;
+        startX = e.clientX;
+        item.classList.add("move");
+    });
 
-            window.addEventListener('mousemove', (e) => {
-                if (!down) return;
-                let dx = e.clientX - startX
+    window.addEventListener("mouseup", () => {
+        down = false;
+        item.classList.remove("move");
+    });
 
-                if (dx > 80  && idx > 0) {
-                    idx = (idx - 1 + total) % total
-                    show(idx)
-                    down = false
-                } else if (dx < -80 && idx < total - 1) {
-                    idx = (idx + 1) % total
-                    show(idx)
-                    down = false
-                }
-            })
-        })
+    window.addEventListener("mousemove", (e) => {
+        if (!down) return;
+        let dx = e.clientX - startX;
 
-        // 스크롤
-        let sections = document.querySelectorAll('section')
+        if (dx > 80 && idx > 0) {
+            idx = (idx - 1 + total) % total;
+            show(idx);
+            down = false;
+        } else if (dx < -80 && idx < total - 1) {
+            idx = (idx + 1) % total;
+            show(idx);
+            down = false;
+        }
+    });
+});
 
-        window.addEventListener('scroll', ()=>{
-            let scrollY = window.scrollY
+// 스크롤
+let sections = document.querySelectorAll("section");
 
-            sections.forEach((item) => {
-                // 시작 위치보다 보이는 섹션의 80%가 내려갔다면
-                if(scrollY + window.innerHeight * 0.8 > item.offsetTop){
-                    item.classList.add('active')
-                }
-            })
-        })
+window.addEventListener("scroll", () => {
+    let scrollY = window.scrollY;
+
+    sections.forEach((item) => {
+        // 시작 위치보다 보이는 섹션의 80%가 내려갔다면
+        if (scrollY + window.innerHeight * 0.8 > item.offsetTop) {
+            item.classList.add("active");
+        }
+    });
+});

@@ -6,7 +6,6 @@
   font-family: "Pretendard", sans-serif;
 }
 
-/* ===== [Element] 슬라이드 영역 ===== */
 .section1__slider {
   width: 100%;
   height: 100%;
@@ -32,7 +31,6 @@
   object-fit: cover;
 }
 
-/* ===== [Element] 텍스트 ===== */
 .section1__text {
   position: absolute;
   left: 150px;
@@ -70,7 +68,6 @@
   line-height: 70px;
 }
 
-/* ===== [Element] 컨트롤러 ===== */
 .section1__control {
   position: absolute;
   left: 300px;

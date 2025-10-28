@@ -30,7 +30,7 @@
     position: fixed;
     z-index: 100;
     opacity: 1;
-    transition: opacity 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .hd--hidden {
@@ -124,4 +124,8 @@
     font-size: 18px;
     margin-left: auto;
     color: white;
+}
+.header__active {
+    transform: translateY(-100px);
+    opacity: 0;
 }

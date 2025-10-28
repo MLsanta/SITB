@@ -15,7 +15,7 @@
   transform: translateY(50px);
   transition: all 0.8s ease-out;
 }
-.section4--active .section4__title {
+.section4__title.active {
   opacity: 1;
   transform: translateY(0);
 }
@@ -36,7 +36,7 @@
   transform: translateY(50px);
   transition: all 0.8s ease-out 0.2s;
 }
-.section4--active .section4__desc {
+.section4__desc.active {
   opacity: 1;
   transform: translateY(0);
 }
@@ -51,7 +51,7 @@
   transform: translateY(80px);
   transition: all 0.8s ease-out 0.4s;
 }
-.section4--active .news {
+.news.active {
   opacity: 1;
   transform: translateY(0);
 }
