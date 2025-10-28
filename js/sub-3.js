@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  fetch("./json/news.json")
+  fetch("js/news.json")
     .then((res) => res.json())
     .then((data) => {
       render("wrap--1", data.page1);
