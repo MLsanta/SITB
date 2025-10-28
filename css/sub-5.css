@@ -42,3 +42,10 @@ span {
     background-repeat: no-repeat;
     background-size: contain;
 }
+.weather__container {
+    position: fixed;
+    top: 30px;
+    right: 15%;
+    display: flex;
+    z-index: 1000;
+}
