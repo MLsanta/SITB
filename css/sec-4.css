@@ -1,125 +1,108 @@
-#section4 {
-    width: 100%;
-    max-width: 1200px;
-    margin: 100px auto;
-    text-align: center;
-    font-family: "Pretendard", sans-serif;
+.section4 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto;
+  text-align: center;
+  font-family: "Pretendard", sans-serif;
 }
 
 /* ===== 제목 ===== */
 .section4__title {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    opacity: 1;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
-}
-.section4--active .section4__title {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.section4__arrow {
-    text-decoration: none;
-    font-size: 1.4rem;
-    margin-left: 5px;
-    color: inherit;
-}
-
-/* ===== 설명 ===== */
-.section4__desc {
-    color: #555;
-    font-size: 1rem;
-    margin-bottom: 50px;
-    opacity: 1;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out 0.2s;
-}
-.section4--active .section4__desc {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ===== 카드 그룹 ===== */
-.news {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    justify-items: center;
-    opacity: 1;
-    transform: translateY(80px);
-    transition: all 0.8s ease-out 0.4s;
-    padding-bottom: 100px;
-}
-.section4--active .news {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ===== 카드 ===== */
-.news__card {
-    width: 100%;
-    max-width: 340px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    text-align: left;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-.news__card:hover {
-    transform: translateY(-8px);
-}
-
-.news__img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.news__text {
-    padding: 18px;
-}
-
-/* 스크롤할 때 */
-.section4__title,
-.section4__desc,
-.news {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s ease-out;
 }
+.section4__title.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-.section4__title.active,
-.section4__desc.active,
+.section4__arrow {
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin-left: 5px;
+  color: inherit;
+}
+
+/* ===== 설명 ===== */
+.section4__desc {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out 0.2s;
+}
+.section4__desc.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== 카드 그룹 ===== */
+.news {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.8s ease-out 0.4s;
+}
 .news.active {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* ===== 카드 ===== */
+.news__card {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.news__card:hover {
+  transform: translateY(-8px);
+}
+
+.news__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news__text {
+  padding: 18px;
+}
+
 .news__category {
-    display: block;
-    font-size: 0.9rem;
-    color: #888;
-    margin-bottom: 6px;
+  display: block;
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 6px;
 }
 
 .news__title {
-    font-size: 1rem;
-    line-height: 1.4;
-    color: #222;
-    font-weight: 600;
-    transition: color 0.2s ease;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #222;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 .news__link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .news__link:hover .news__title {
-    color: #111;
+  color: #111;
 }
