@@ -41,3 +41,33 @@ kakao.maps.event.addListener(marker, "mouseout", function () {
     infowindow.close();
 });
 map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+let apiKey = "98d8210428d495382adb2508710b0179";
+let temp = document.getElementById("temp");
+let place = document.getElementById("place");
+let wind = document.getElementById("wind");
+let des = document.getElementById("des");
+let icon = document.getElementById("icon");
+
+navigator.geolocation.getCurrentPosition((position) => {
+    console.log(position);
+    let lat = 37.318;
+    let lon = 126.8361;
+    console.log("현재위치", lat, lon);
+    getWeather(lat, lon);
+});
+
+let getWeather = async (lat, lon) => {
+    let res = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=kr`
+    );
+    let data = await res.json();
+    console.log(data);
+
+    temp.textContent = data.main.temp;
+    place.textContent = data.name;
+    wind.textContent = data.wind.speed;
+    des.textContent = data.weather[0].description;
+    let img = data.weather[0].icon;
+    iconsrc = `http://openweathermap.org/img/wn/${img}@2x.png`;
+    icon.setAttribute("src", iconsrc);
+};
