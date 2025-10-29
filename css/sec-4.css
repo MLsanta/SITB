@@ -1,4 +1,4 @@
-#section4 {
+.section4 {
   width: 100%;
   max-width: 1200px;
   margin: 100px auto;
@@ -6,7 +6,8 @@
   font-family: "Pretendard", sans-serif;
 }
 
-#section4 h2 {
+/* ===== 제목 ===== */
+.section4__title {
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 10px;
@@ -14,19 +15,20 @@
   transform: translateY(50px);
   transition: all 0.8s ease-out;
 }
-#section4.active h2 {
+.section4__title.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-#section4 h2 .arrow {
+.section4__arrow {
   text-decoration: none;
   font-size: 1.4rem;
   margin-left: 5px;
   color: inherit;
 }
 
-#section4 .desc {
+/* ===== 설명 ===== */
+.section4__desc {
   color: #555;
   font-size: 1rem;
   margin-bottom: 50px;
@@ -34,12 +36,13 @@
   transform: translateY(50px);
   transition: all 0.8s ease-out 0.2s;
 }
-#section4.active .desc {
+.section4__desc.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-.news__cards {
+/* ===== 카드 그룹 ===== */
+.news {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
@@ -48,12 +51,13 @@
   transform: translateY(80px);
   transition: all 0.8s ease-out 0.4s;
 }
-#section4.active .news__cards {
+.news.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-.card {
+/* ===== 카드 ===== */
+.news__card {
   width: 100%;
   max-width: 340px;
   border-radius: 12px;
@@ -64,35 +68,41 @@
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.card:hover {
+.news__card:hover {
   transform: translateY(-8px);
 }
-.card img {
+
+.news__img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
-.card .text {
+
+.news__text {
   padding: 18px;
 }
-.card .category {
+
+.news__category {
   display: block;
   font-size: 0.9rem;
   color: #888;
   margin-bottom: 6px;
 }
-.card h3 {
+
+.news__title {
   font-size: 1rem;
   line-height: 1.4;
   color: #222;
   font-weight: 600;
   transition: color 0.2s ease;
 }
-.card a {
+
+.news__link {
   text-decoration: none;
   color: inherit;
   display: block;
 }
-.card a:hover h3 {
+
+.news__link:hover .news__title {
   color: #111;
 }

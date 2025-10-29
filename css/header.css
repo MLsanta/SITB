@@ -1,23 +1,29 @@
 .hd {
     width: 100vw;
-    height: 50px;
-    padding-top: 10px;
+    height: 80px;
+    /* padding-top: 10px; */
     /* border: 2px solid orange; */
-    /* background-color: black; */
+    /* background-color: pink; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: auto; */
+    margin: auto;
     position: fixed;
+    top: 0px; left: 0px;
     z-index: 100;
     opacity: 1;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    /* transform: translateY(100px); */
 }
-
-.hd--hidden {
+.header__active{
+    opacity: 0;
+    transform:  translateY(-100px);
+}
+/* .hd--hidden {
     opacity: 0;
     pointer-events: none;
-}
+} */
+
 
 .nav {
     /* display: inline-block;  a 태그가 inline(text) width와 height 가질 수 없어서 블록 형태로 변경 */
@@ -48,14 +54,14 @@
 }
 
 .nav .menu {
-    width: 40%;
+    width: 45%;
     height: 80px;
     /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    gap: 50px;
+    gap: 30px;
     /* margin-left: 50px; */
 }
 
@@ -69,6 +75,7 @@
 
 .nav .menu svg:hover {
     /* text-shadow: none; */
+    color: rgb(0, 0, 0);
     src: url(../src/img/logo/logo.jpg);
 }
 .nav .menu a:hover {
@@ -91,14 +98,24 @@
 .menu a:hover::after {
     opacity: 1;
 }
+
+.hd .menu a.active::after {
+    opacity: 1;
+}
+
+.menu a.active {
+    font-weight: bold;
+    color: black;
+
+}
 /* .menu{
         text-decoration: none;
         color: initial;
     } */
-.ic {
+/* .ic {
     width: 150px;
     height: 80px;
-    /* background-color: aquamarine; */
+    background-color: aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,13 +123,13 @@
     font-weight: bold;
     margin-left: auto;
     color: white;
-}
+} */
 
 
 /* .hd:has(.nav> a:hover) svg path {fill: black;} */
-.hd:has(.menu a:hover) .menu a,
-.hd:has(.menu a:hover) .ic { color: rgb(0, 0, 0); }
-.hd:has(.menu a:hover) .nav > a svg path {fill: rgb(0, 0, 0)}
+.hd:has(.menu a:hover) .menu a {color: black}
+/* .hd:has(.menu a:hover) .ic { color: rgb(0, 0, 0); } */
+.hd:has(.menu a:hover) .nav > svg path {fill: rgb(0, 0, 0)}
 
 
 /*sub__page */
@@ -122,16 +139,17 @@
 }
 
 
-.sub__page .hd .nav > a svg path {
+.sub__page .hd .nav > svg path {
     fill: black;
 }
 
 
-.sub__page .hd .ic .bi{
+/* .sub__page .hd .ic .bi{
     color: black;
-}
+} */
 
 /* .page--1 .hd .menu:nth-child(1){
     font-weight: bold;
 } */
+
 
