@@ -9,3 +9,16 @@ window.addEventListener("scroll", () => {
         header.classList.remove("header__active");
     }
 });
+
+document.addEventListener("DOMContentLoaded", () =>{
+    const currentPagePath = window.location.pathname ;
+    const menuLinks = document.querySelectorAll(".hd .menu a")
+
+    menuLinks.forEach((link)=>{
+        const linkHref = link.getAttribute("href");
+
+        if(currentPagePath.endsWith(linkHref)){
+            link.classList.add("active");
+        }
+    })
+})
