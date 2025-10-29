@@ -53,7 +53,7 @@ function startTyping() {
                 clearInterval(typingInterval);
                 typingStarted = false;
             }
-        }, 200);
+        }, 100);
     }
 }
 
@@ -89,21 +89,14 @@ window.addEventListener("scroll", () => {
 
     // ✅ 섹션 2
     if (sy >= s__top__2 - 400 && sy < s__top__3 - 400) {
-        if (!typingStarted) {
-            typingStarted = true;
-            typingInterval = setInterval(typing, 200);
-        }
+        startTyping();
         document
             .querySelector(".desc__main__contents2 h1")
             .classList.add("desc__main__contents__active");
         img__container2.classList.add("img__container__active");
         desc__sub__container2.classList.add("desc__sub__container__active");
     } else {
-        if (typingStarted) {
-            clearInterval(typingInterval);
-            typingStarted = false;
-            typingInterval = null;
-        }
+        stopTyping();
         document
             .querySelector(".desc__main__contents2 h1")
             .classList.remove("desc__main__contents__active");
@@ -116,11 +109,11 @@ window.addEventListener("scroll", () => {
         document
             .querySelector(".desc__main__contents3 h1")
             .classList.add("desc__main__contents__active");
-        img__container3.classList.add("img__container__active");
+        img__container3.classList.add("img__container__active2");
         desc__sub__container3.classList.add("desc__sub__container__active");
     } else {
         desc__main__contents3.classList.remove("desc__main__contents__active");
-        img__container3.classList.remove("img__container__active");
+        img__container3.classList.remove("img__container__active2");
         desc__sub__container3.classList.remove("desc__sub__container__active");
     }
 
@@ -129,11 +122,11 @@ window.addEventListener("scroll", () => {
         document
             .querySelector(".desc__main__contents4 h1")
             .classList.add("desc__main__contents__active");
-        img__container4.classList.add("img__container__active");
+        img__container4.classList.add("img__container__active3");
         desc__sub__container4.classList.add("desc__sub__container__active");
     } else {
         desc__main__contents4.classList.remove("desc__main__contents__active");
-        img__container4.classList.remove("img__container__active");
+        img__container4.classList.remove("img__container__active3");
         desc__sub__container4.classList.remove("desc__sub__container__active");
     }
 

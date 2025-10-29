@@ -154,19 +154,22 @@ input[type="radio"]:checked + label.desc__btn__label {
     background-image: url(../src/img/2/intro3.jpg);
     width: 840px;
     height: 240px;
+    transform: translateX(300%) scale(3);
     background-position: center 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 .img__container4 {
     background-image: url(../src/img/2/intro4.jpg);
     width: 840px;
     height: 240px;
+    transform: scale(3);
+    opacity: 0;
     background-position: center 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all 0.3s ease;
+    transition: all 0.7s ease;
 }
 .desc__sub__container1 {
     width: 100%;
@@ -241,6 +244,24 @@ input[type="radio"]:checked + label.desc__btn__label {
     position: absolute;
     z-index: 1;
 }
+
+.sec3 .img__container3.img__container__active2 {
+    transform: translateX(0) scale(3);
+    background-position: 50% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+}
+.sec4 .img__container4.img__container__active3 {
+    transform: scale(3);
+    opacity: 1;
+    background-position: 50% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+}
 .desc__sub__container__active {
     color: white;
 }
@@ -273,6 +294,8 @@ input[type="radio"]:checked + label.desc__btn__label {
     transform: translateY(100px);
     z-index: 10;
 }
+
+
 
 .desc__main__contents2 h1 {
     width: 100%;
