@@ -1,48 +1,57 @@
-#section1 {
+.section1 {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  position: relative;
+  font-family: "Pretendard", sans-serif;
 }
-#section1 .slider {
+
+.section1__slider {
   width: 100%;
   height: 100%;
+  position: relative;
 }
-#section .slider > div {
+
+.section1__slide {
+  position: absolute;
   width: 100%;
   height: 100%;
   opacity: 0;
   transition: opacity 1.5s ease;
 }
-#section .slider > div.active {
+
+.section1__slide--active {
   opacity: 1;
   z-index: 2;
 }
-#section1 video {
-  inset: 0;
+
+.section1__video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#section1 .Txt {
-  position: relative;
+
+.section1__text {
+  position: absolute;
   left: 150px;
-  bottom: 530px;
+  bottom: 200px;
   color: #fff;
   z-index: 3;
   text-shadow: 10px 10px 30px rgba(12, 11, 11, 0.45);
   transform: translateY(50px);
-  animation: txtUp 1.5s ease-out forwards;
+  animation: section1-txtUp 1.5s ease-out forwards;
   font-weight: 500;
 }
-#section1 .Txt > span {
+
+.section1__label {
   font-size: 20px;
   font-weight: bold;
   display: inline-flex;
   align-items: center;
-  justify-content: start;
   gap: 10px;
 }
-#section1 .Txt > span i {
+
+.section1__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -53,12 +62,13 @@
   font-size: 16px;
   color: black;
 }
-#section1 .Txt h1 {
+
+.section1__title {
   font-size: 55px;
   line-height: 70px;
 }
 
-#section1 .control {
+.section1__control {
   position: absolute;
   left: 300px;
   bottom: 130px;
@@ -73,26 +83,32 @@
   font-size: 15px;
 }
 
-#section1 .outBar {
+.section1__progress {
   width: 100px;
   height: 2px;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 999px;
   position: relative;
 }
-#section1 .outBar .bar {
+
+.section1__bar {
   position: absolute;
   height: 100%;
   background: white;
+  width: 0%;
 }
 
-#section1 .control .btn {
+.section1__count {
+  font-weight: 600;
+}
+
+.section1__buttons {
   display: flex;
   gap: 10px;
   font-size: 27px;
 }
 
-#section1 .control button {
+.section1__btn {
   border: none;
   border-radius: 50%;
   background-color: transparent;
@@ -105,10 +121,12 @@
   justify-content: center;
   transition: all 0.3s ease;
 }
-#section1 .control button:hover {
+
+.section1__btn:hover {
   background: rgba(161, 159, 159, 0.5);
 }
-@keyframes txtUp {
+
+@keyframes section1-txtUp {
   0% {
     opacity: 0;
     transform: translateY(50px);
