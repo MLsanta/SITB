@@ -3,12 +3,11 @@
   max-width: 1200px;
   margin: 100px auto;
   text-align: center;
-  font-family: "Pretendard", sans-serif;
 }
 
 /* ===== 제목 ===== */
 .section4__title {
-  font-size: 2rem;
+  font-size: 38px;
   font-weight: 800;
   margin-bottom: 10px;
   opacity: 0;
@@ -21,16 +20,14 @@
 }
 
 .section4__arrow {
-  text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 24px;
   margin-left: 5px;
-  color: inherit;
 }
 
 /* ===== 설명 ===== */
 .section4__desc {
   color: #555;
-  font-size: 1rem;
+  font-size: 20px;
   margin-bottom: 50px;
   opacity: 0;
   transform: translateY(50px);
@@ -59,7 +56,7 @@
 /* ===== 카드 ===== */
 .news__card {
   width: 100%;
-  max-width: 340px;
+  /* max-width: 340px; */
   border-radius: 12px;
   overflow: hidden;
   background: #fff;
@@ -90,7 +87,7 @@
 }
 
 .news__title {
-  font-size: 1rem;
+  font-size: 17px;
   line-height: 1.4;
   color: #222;
   font-weight: 600;
