@@ -6,10 +6,10 @@
         <link rel="stylesheet" href="css/sub-5.css" />
         <link rel="stylesheet" href="css/footer.css" />
         <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/header-sub-5.css">
+        <link rel="stylesheet" href="css/header.css">
     </head>
 
-    <body>
+    <body class="sub__page">
       <header class="hd" >
         <div class="nav">
 
@@ -22,7 +22,7 @@
               <a href="sub-5.html" class="transition-color">오시는 길</a>
             </div>
         </div>
-        <div class="ic"><i class="bi bi-globe"></i></div>
+        <!-- <div class="ic"><i class="bi bi-globe"></i></div> -->
     </header>
         <section>
             <h1 class="main__text">오시는 길</h1>
@@ -30,7 +30,7 @@
             <div class="adress__container">
               <div class="adress">
                 <h2>주소</h2>
-                <span class="adress__text">(우) 15360코스모프라자,  경기도 안산시 단원구 고잔동 535-2, 601호</span>
+                <span class="adress__text">(우) 15360 코스모프라자,  경기도 안산시 단원구 고잔동 535-2, 601호</span>
               </div>
               
                 <div class="call">
@@ -59,39 +59,7 @@
                 <span id="des"></span>
             </div>
             <img id="icon" alt="icon" />
-        </div>
-        <script>
-            let apiKey = "98d8210428d495382adb2508710b0179";
-            let temp = document.getElementById("temp");
-            let place = document.getElementById("place");
-            let wind = document.getElementById("wind");
-            let des = document.getElementById("des");
-            let icon = document.getElementById("icon");
-
-            navigator.geolocation.getCurrentPosition((position) => {
-                console.log(position);
-                let lat = position.coords.latitude;
-                let lon = position.coords.longitude;
-                console.log("현재위치", lat, lon);
-                getWeather(lat, lon);
-            });
-
-            let getWeather = async (lat, lon) => {
-                let res = await fetch(
-                    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=kr`
-                );
-                let data = await res.json();
-                console.log(data);
-
-                temp.textContent = data.main.temp;
-                place.textContent = data.name;
-                wind.textContent = data.wind.speed;
-                des.textContent = data.weather[0].description;
-                let img = data.weather[0].icon;
-                iconsrc = `http://openweathermap.org/img/wn/${img}@2x.png`;
-                icon.setAttribute("src", iconsrc);
-            };
-        </script></div>
+        </div></div>
         </section>
         <footer>
       <div class="out__container">

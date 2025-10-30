@@ -44,7 +44,7 @@ span {
     background-size: contain;
 }
 .weather__container {
-    position: fixed;
+    position: absolute;
     top: 30px;
     right: 15%;
     display: flex;
