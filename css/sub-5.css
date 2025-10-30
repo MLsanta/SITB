@@ -222,3 +222,6 @@ span {
     transform: translateY(0);
   }
 }
+.traffic__btn {
+    background-color: #999;
+}
