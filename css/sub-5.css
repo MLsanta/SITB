@@ -14,13 +14,13 @@ section {
 
 section h1.main__text {
   display: inline-block;
-  margin-right: 70px;
+  margin-right: 60px;
 }
 
 /* ===== 지도 버튼 영역 ===== */
 .mapTypeBox {
   display: inline-flex;
-  gap: 15px;
+  gap: 18px;
   align-items: center;
   transform: translateY(-9px);
 }
@@ -29,7 +29,7 @@ section h1.main__text {
 .mapTypeBox button {
   width: 130px;
   height: 50px;
-  background-color: #fff;
+  background-color: #eee;
   border-radius: 50px;
   line-height: 50px;
   text-align: center;
@@ -43,7 +43,7 @@ section h1.main__text {
 
 button:hover {
   background-color: #000;
-  color: #fff;
+  color: #eee;
 }
 
 .mapTypeBox button.active {
