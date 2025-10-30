@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const box = document.getElementById(id);
         list.forEach((v) => {
             box.innerHTML += `
-              <div href="" class="card">
+              <div class="card">
                 <img src="${v.img}" alt="${v.title}" class="img" />
                 <div class="txt">
                   <p class="cat">${v.category}</p>
