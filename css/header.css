@@ -6,17 +6,17 @@
     /* background-color: red; */
     align-items: center;
     position: fixed;
-    top: 0px; 
-    left: 50%; 
-    transform: translateX(-50%) translateY(0); 
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
     z-index: 100;
     opacity: 1;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.header__active{
+.header__active {
     opacity: 0;
-    transform:  translateX(-50%) translateY(-100px);
+    transform: translateX(-50%) translateY(-100px);
 }
 
 .nav {
@@ -57,7 +57,7 @@
 
 .nav a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     position: relative;
     padding-right: 15px;
 }
@@ -93,22 +93,18 @@
 .menu a.active {
     font-weight: bold;
     color: black;
-
 }
-.hd:has(.menu a:hover) .menu a {color: black}
-.hd:has(.menu a:hover) .nav > svg path {fill: rgb(0, 0, 0)}
-
-
+.hd:has(.menu a:hover) .menu a {
+    color: black;
+}
+.hd:has(.menu a:hover) .nav > svg path {
+    fill: rgb(0, 0, 0);
+}
 
 .sub__page .hd .menu a {
     color: black;
 }
 
-
 .sub__page .hd .nav > svg path {
     fill: black;
 }
-
-
-
-
