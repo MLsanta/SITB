@@ -26,6 +26,10 @@
     </header>
         <section>
             <h1 class="main__text">오시는 길</h1>
+            <div class="mapTypeBox">
+              <button data-type="traffic">실시간 교통정보</button> 
+              <button onclick="changeMarker('carpark')">주변 주차장</button>
+            </div>
             <div id="map" style="width: 1200px; height: 600px"></div>
             <div class="adress__container">
               <div class="adress">
@@ -39,60 +43,36 @@
                 </div>
               
             </div>
-            <div class="weather__container">
-              
-        <div class="outBox">
-            <div>
-                <span>기온:</span>
-                <span id="temp"></span>
-            </div>
-            <div>
-                <span>위치:</span>
-                <span id="place"></span>
-            </div>
-            <div>
-                <span>풍속:</span>
-                <span id="wind"></span>
-            </div>
-            <div>
-                <span>설명:</span>
-                <span id="des"></span>
-            </div>
-            <img id="icon" alt="icon" />
-        </div>
-        <script>
-            let apiKey = "98d8210428d495382adb2508710b0179";
-            let temp = document.getElementById("temp");
-            let place = document.getElementById("place");
-            let wind = document.getElementById("wind");
-            let des = document.getElementById("des");
-            let icon = document.getElementById("icon");
 
-            navigator.geolocation.getCurrentPosition((position) => {
-                console.log(position);
-                let lat = position.coords.latitude;
-                let lon = position.coords.longitude;
-                console.log("현재위치", lat, lon);
-                getWeather(lat, lon);
-            });
-
-            let getWeather = async (lat, lon) => {
-                let res = await fetch(
-                    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=kr`
-                );
-                let data = await res.json();
-                console.log(data);
-
-                temp.textContent = data.main.temp;
-                place.textContent = data.name;
-                wind.textContent = data.wind.speed;
-                des.textContent = data.weather[0].description;
-                let img = data.weather[0].icon;
-                iconsrc = `http://openweathermap.org/img/wn/${img}@2x.png`;
-                icon.setAttribute("src", iconsrc);
-            };
-        </script></div>
         </section>
+
+        <div class="weather__container">
+          <div class="outBox">
+
+            <img id="icon" alt="날씨 아이콘" />
+
+            <div class="weather__info">
+              <div class="place" id="place"></div>
+
+              <div class="temp">
+                <span id="temp"></span>
+                <span class="unit">°C</span>
+              </div>
+
+              <div class="bottom__info">
+                <div class="desc">
+                  <span>설명:</span>
+                  <span id="des"></span>
+                </div>
+                <div class="wind">
+                  <span>풍속:</span>
+                  <span id="wind"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <footer>
       <div class="out__container">
       <div class="footer__box">
@@ -127,8 +107,9 @@
     </footer>
         <script
             type="text/javascript"
-            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c034173fd92dce9ccb5c06c2605c313b"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5ceb68e0f40a6f48a7f0866faebbe868"
         ></script>
+        <!-- c034173fd92dce9ccb5c06c2605c313b -->
         <script src="js/sub-5.js"></script>
         <script src="js/header.js"></script>
     </body>
