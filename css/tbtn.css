@@ -1,100 +1,45 @@
-/* --- 기본 페이지 스타일 (임시) --- */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-                Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin: 0;
-            font-size: 16px;
-            line-height: 1.6;
-        }
+/* 기본 버튼 스타일: 숨김, 고정 위치 설정 */
+.c__scroll__Tbtn {
+    /* 요청 디자인: 검정색 원 */
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* 원형 */
+    width: 60px; /* 버튼 크기 */
+    height: 60px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.2;
+    font-weight: bold;
+    font-size: 14px;
+    
+    /* 요청 위치: 오른쪽 하단 */
+    position: fixed;
+    right: 10%; /* 오른쪽 여백 10% */
+    bottom: 10%; /* 아래쪽 여백 10% */
+    z-index: 1000; /* 다른 요소 위에 표시 */
+    
+    /* 페이드 인/아웃을 위한 초기 상태 설정 */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* 전환 효과 */
 
-        section {
-            padding: 60px 20px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        /* 사용자가 제공한 클래스에 대한 최소한의 스타일 */
-        .section1 {
-            min-height: 80vh;
-            background-color: #f0f0f0;
-            position: relative;
-        }
-        
-        .section1__slider video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            max-height: 70vh;
-        }
-        
-        .section1__text {
-            position: absolute;
-            bottom: 100px;
-            left: 50px;
-            color: white;
-            background-color: rgba(0,0,0,0.5);
-            padding: 20px;
-            border-radius: 8px;
-        }
-        
-        .section1__control {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #fff;
-            padding: 10px;
-            border-radius: 8px;
-        }
+    /* 내부 요소 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px; /* 내부 패딩 조정 */
+}
 
-        .sec__2 {
-            background-color: #fff;
-        }
-        
-        .imgBox2 img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            display: block;
-            margin: 10px 0;
-            border-radius: 8px;
-        }
+/* 내부 텍스트 스타일 */
+.c__scroll__Tbtn div:first-child {
+    font-size: 16px; /* 화살표 크기 */
+    margin-bottom: 2px;
+}
 
-        .sec--3 {
-            min-height: 50vh;
-            background-color: #fafafa;
-            display: flex;
-            align-items: center;
-        }
-        
-        .sec--3 video {
-            max-width: 50%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .section4 {
-            background-color: #fff;
-        }
-        
-        .news {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        
-        .news__card {
-            width: 300px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .news__img {
-            width: 100%;
-            height: auto;
-        }
-        
-        .news__text {
-            padding: 15px;
-        }
+/* 스크롤 시 표시 상태 (JS가 추가하는 클래스) */
+.c__scroll__Tbtn.show {
+    opacity: 1; /* 투명도 1로 페이드 인 */
+    visibility: visible;
+}
