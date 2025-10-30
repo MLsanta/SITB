@@ -144,3 +144,19 @@ window.addEventListener("DOMContentLoaded", () => {
     getWeather(37.318, 126.8361);
   });
 });
+
+let time = document.querySelector(".time");
+function updateTime() {
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = ("0" + (today.getMonth() + 1)).slice(-2);
+    let date = ("0" + today.getDate()).slice(-2);
+    let hours = ("0" + today.getHours()).slice(-2);
+    let minutes = ("0" + today.getMinutes()).slice(-2);
+    let seconds = ("0" + today.getSeconds()).slice(-2);
+
+    time.textContent = `${month}월 ${date}일  ${hours}시 ${minutes}분`;
+}
+setInterval(() => {
+    updateTime();
+}, 1000);
