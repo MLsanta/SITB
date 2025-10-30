@@ -1,224 +1,228 @@
 body {
-  width: 100vw;
+    width: 100vw;
 }
 
 section {
-  width: 1200px;
-  margin: auto;
+    width: 1200px;
+    margin: auto;
 }
 
 .main__text {
-  font-size: 3rem;
-  padding-top: 100px;
+    font-size: 3rem;
+    padding-top: 100px;
 }
 
 section h1.main__text {
-  display: inline-block;
-  margin-right: 70px;
+    display: inline-block;
+    margin-right: 70px;
 }
 
 /* ===== 지도 버튼 영역 ===== */
 .mapTypeBox {
-  display: inline-flex;
-  gap: 15px;
-  align-items: center;
-  transform: translateY(-9px);
+    display: inline-flex;
+    gap: 15px;
+    align-items: center;
+    transform: translateY(-9px);
 }
 
 /* 버튼 기본 스타일 */
 .mapTypeBox button {
-  width: 130px;
-  height: 50px;
-  background-color: #fff;
-  border-radius: 50px;
-  line-height: 50px;
-  text-align: center;
-  color: #000;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color 0.3s;
-  font-size: 17px;
-  font-weight: 400;
+    width: 130px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s;
+    font-size: 17px;
+    font-weight: 400;
 }
 
 button:hover {
-  background-color: #000;
-  color: #fff;
+    background-color: #000;
+    color: #fff;
 }
 
 .mapTypeBox button.active {
-  background-color: #000;
-  color: #fff;
+    background-color: #000;
+    color: #fff;
 }
 
 /* ===== 주소, 연락처 영역 ===== */
 .adress__container {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 0 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 100px;
 }
 
 span {
-  color: #333;
+    color: #333;
 }
 
 /* ===== 지도 ===== */
 .map__container {
-  width: 300px;
-  height: 200px;
-  border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
 }
 
 .map__discription {
-  padding-left: 40px;
+    padding-left: 40px;
 }
 
 /* ===== 날씨 카드 ===== */
 .weather__container {
-  position: absolute;
-  top: 30px;
-  right: 15%;
-  display: flex;
+    position: absolute;
+    top: 30px;
+    right: 15%;
+    display: flex;
 }
 
 .weather__container .outBox {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  color: #111;
-  /* background-color: aqua; */
-  margin-top: 97px;
-   transform: translateX(-45px);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #111;
+    /* background-color: aqua; */
+    margin-top: 97px;
+    transform: translateX(-45px);
 }
 
 /* 날씨 아이콘 */
 .weather__container img#icon {
-  width: 90px;
-  height: 90px;
+    width: 90px;
+    height: 90px;
 }
 
 .weather__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
 }
 
 /* 도시명 */
 .weather__info .place {
-  font-size: 18px;
-  font-weight: 600;
-  color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
 }
 
 /* 기온 */
 .weather__info .temp {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
 }
 
 .weather__info #temp {
-  font-size: 30px;
-  font-weight: 700;
-  color: #000;
-  line-height: 1;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1;
 }
 
 .weather__info .unit {
-  font-size: 20px;
-  color: #333;
+    font-size: 20px;
+    color: #333;
 }
 
 /* 설명 , 풍속 */
 .weather__info .bottom__info {
-  display: flex;
-  justify-content: space-between;
-  width: 150px;
-  font-size: 15px;
-  color: #444;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    font-size: 15px;
+    color: #444;
 }
 
 .pin__container {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
-  padding: 18px 20px;
-  width: 340px;
-  height: auto;
-  display: block;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  animation: fadeIn 0.4s ease forwards;
-  /* 키프레임으로 함 */
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+    padding: 18px 20px;
+    width: 340px;
+    height: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: fadeIn 0.4s ease forwards;
+    /* 키프레임으로 함 */
 }
 
 /* 로고 텍스트 내부 */
 .info__wrap {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 40px;
-  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    width: 100%;
 }
 
 /* 로고 */
 .img__container {
-  width: 65px;
-  height: 65px;
-  background-image: url(../src/img/logo/lineaca_logo.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+    width: 65px;
+    height: 65px;
+    background-image: url(../src/img/logo/lineaca_logo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .info__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* 타이틀 */
 .info__text h2 {
-  font-size: 17px;
-  font-weight: 700;
-  margin-bottom: 4px;  
-  color: #222;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #222;
 }
 
 /* 이메일, 연락처 */
 .info__text span {
-  font-size: 14px;
-  color: #555;
+    font-size: 14px;
+    color: #555;
 }
 
 /* 닫기 버튼 */
 .close-btn {
-  position: absolute;
-  top: 0.5px;
-  right: 12px;
-  font-size: 20px;
-  font-weight: 600;
-  cursor: pointer;
-  color: #999;
-  transition: color 0.2s ease, transform 0.2s ease;
+    position: absolute;
+    top: 0.5px;
+    right: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .close-btn:hover {
-  color: #000;
-  transform: scale(1.1);
+    color: #000;
+    transform: scale(1.1);
 }
 
 /* ===== 애니메이션 ===== */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.time {
+    position: absolute;
+    top: -30px;
+    left: 60px;
 }
