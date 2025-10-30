@@ -1,0 +1,42 @@
+.c__scroll__Tbtn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50%; 
+    width: 60px; 
+    height: 60px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.2;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 10%; 
+    bottom: 10%; 
+    z-index: 1000; 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 5px;  */
+}
+
+.tb--2{
+    color: white;
+}
+.c__scroll__Tbtn div:first-child {
+    font-size: 16px; 
+    margin-bottom: 2px;
+}
+
+
+.c__scroll__Tbtn.show {
+    opacity: 1;
+    visibility: visible;
+}
