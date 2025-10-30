@@ -226,3 +226,6 @@ span {
     top: -30px;
     left: 60px;
 }
+.traffic__btn {
+    background-color: #999;
+}
