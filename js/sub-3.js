@@ -46,14 +46,14 @@ window.addEventListener("DOMContentLoaded", () => {
         const box = document.getElementById(id);
         list.forEach((v) => {
             box.innerHTML += `
-              <a href="" class="card">
+              <div href="" class="card">
                 <img src="${v.img}" alt="${v.title}" class="img" />
                 <div class="txt">
                   <p class="cat">${v.category}</p>
                   <p class="head">${v.title}</p>
                   <p class="date">${v.date}</p>
                 </div>
-              </a>`;
+              </div>`;
         });
     }
 
