@@ -1,0 +1,45 @@
+/* 기본 버튼 스타일: 숨김, 고정 위치 설정 */
+.c__scroll__Tbtn {
+    /* 요청 디자인: 검정색 원 */
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* 원형 */
+    width: 60px; /* 버튼 크기 */
+    height: 60px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.2;
+    font-weight: bold;
+    font-size: 14px;
+    
+    /* 요청 위치: 오른쪽 하단 */
+    position: fixed;
+    right: 10%; /* 오른쪽 여백 10% */
+    bottom: 10%; /* 아래쪽 여백 10% */
+    z-index: 1000; /* 다른 요소 위에 표시 */
+    
+    /* 페이드 인/아웃을 위한 초기 상태 설정 */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* 전환 효과 */
+
+    /* 내부 요소 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px; /* 내부 패딩 조정 */
+}
+
+/* 내부 텍스트 스타일 */
+.c__scroll__Tbtn div:first-child {
+    font-size: 16px; /* 화살표 크기 */
+    margin-bottom: 2px;
+}
+
+/* 스크롤 시 표시 상태 (JS가 추가하는 클래스) */
+.c__scroll__Tbtn.show {
+    opacity: 1; /* 투명도 1로 페이드 인 */
+    visibility: visible;
+}
