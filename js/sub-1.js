@@ -109,11 +109,11 @@ window.addEventListener("scroll", () => {
         document
             .querySelector(".desc__main__contents3 h1")
             .classList.add("desc__main__contents__active");
-        img__container3.classList.add("img__container__active");
+        img__container3.classList.add("img__container__active2");
         desc__sub__container3.classList.add("desc__sub__container__active");
     } else {
         desc__main__contents3.classList.remove("desc__main__contents__active");
-        img__container3.classList.remove("img__container__active");
+        img__container3.classList.remove("img__container__active2");
         desc__sub__container3.classList.remove("desc__sub__container__active");
     }
 
@@ -122,11 +122,11 @@ window.addEventListener("scroll", () => {
         document
             .querySelector(".desc__main__contents4 h1")
             .classList.add("desc__main__contents__active");
-        img__container4.classList.add("img__container__active");
+        img__container4.classList.add("img__container__active3");
         desc__sub__container4.classList.add("desc__sub__container__active");
     } else {
         desc__main__contents4.classList.remove("desc__main__contents__active");
-        img__container4.classList.remove("img__container__active");
+        img__container4.classList.remove("img__container__active3");
         desc__sub__container4.classList.remove("desc__sub__container__active");
     }
 
