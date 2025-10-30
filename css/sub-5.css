@@ -51,7 +51,7 @@ button:hover {
   color: #fff;
 }
 
-/* ===== 주소, 연락처 영역 ===== */
+/* ===== 주소, 연락처 ===== */
 .adress__container {
   display: flex;
   justify-content: space-between;
