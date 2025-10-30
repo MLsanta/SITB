@@ -222,6 +222,8 @@ span {
     transform: translateY(0);
   }
 }
-.traffic__btn {
-    background-color: #999;
+.time {
+    position: absolute;
+    top: -30px;
+    left: 60px;
 }
