@@ -100,13 +100,20 @@
 
 
 
-.sub__page .hd .menu a {
-    color: black;
+.sub__page .hd {
+    background-color: white; /* 필요시 */
 }
 
-
+.sub__page .hd .menu a,
+.sub__page .hd .menu a.active,
 .sub__page .hd .nav > svg path {
-    fill: black;
+    color: black !important; /* 텍스트 */
+    fill: black !important;  /* svg 아이콘 */
+}
+
+/* hover 효과도 유지 */
+.sub__page .hd .menu a:hover {
+    color: black !important;
 }
 
 
