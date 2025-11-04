@@ -1,0 +1,47 @@
+@media (max-width: 480px) {
+    .section1__text {
+        left: 20px;
+        bottom: 100px;
+        font-size: 14px;
+        transform: translateY(30px);
+    }
+
+    .section1__label {
+        font-size: 14px;
+    }
+
+    .section1__icon {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    .section1__title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .section1__control {
+        left: 50%;
+        bottom: 80px;
+        transform: translateX(-50%);
+        font-size: 12px;
+        gap: 15px;
+    }
+
+    .section1__progress {
+        width: 70px;
+        height: 2px;
+    }
+
+    .section1__buttons {
+        gap: 8px;
+        font-size: 20px;
+    }
+
+    .section1__btn {
+        width: 25px;
+        height: 25px;
+        font-size: 18px;
+    }
+}
