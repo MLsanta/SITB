@@ -6,17 +6,17 @@
     /* background-color: red; */
     align-items: center;
     position: fixed;
-    top: 0px; 
-    left: 50%; 
-    transform: translateX(-50%) translateY(0); 
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
     z-index: 100;
     opacity: 1;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.header__active{
+.header__active {
     opacity: 0;
-    transform:  translateX(-50%) translateY(-100px);
+    transform: translateX(-50%) translateY(-100px);
 }
 
 .nav {
@@ -93,22 +93,62 @@
 .menu a.active {
     font-weight: bold;
     color: black;
-
 }
-.hd:has(.menu a:hover) .menu a {color: black}
-.hd:has(.menu a:hover) .nav > svg path {fill: rgb(0, 0, 0)}
-
-
+.hd:has(.menu a:hover) .menu a {
+    color: black;
+}
+.hd:has(.menu a:hover) .nav > svg path {
+    fill: rgb(0, 0, 0);
+}
 
 .sub__page .hd .menu a {
     color: black;
 }
 
-
 .sub__page .hd .nav > svg path {
     fill: black;
 }
 
+@media (max-width: 480px) {
+    .hd {
+        width: 100vw;
+        height: 60px;
+        transform: translateX(-50%);
+        padding: 0 10px;
+        justify-content: space-between;
+    }
 
+    .nav {
+        width: 100%;
+        height: 60px;
+        font-size: 14px;
+        gap: 15px;
+        padding: 0 10px;
+    }
 
+    .nav .logo {
+        width: 120px;
+        height: 40px;
+        background-size: contain;
+        background-position: center;
+    }
 
+    .nav .menu {
+        width: auto;
+        height: 60px;
+        font-size: 14px;
+        gap: 15px;
+        overflow-x: auto; /* 화면 넘치면 스크롤 가능 */
+    }
+
+    .nav a {
+        padding-right: 8px;
+    }
+
+    .nav a::after {
+        width: 4px;
+        height: 4px;
+        top: -2px;
+        right: 2px;
+    }
+}
