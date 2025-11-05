@@ -37,3 +37,4 @@ yearSelect.addEventListener('change', ()=>{
         table2023.style.display = 'table';
     }
 })
+
