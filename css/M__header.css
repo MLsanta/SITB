@@ -151,4 +151,8 @@
         top: -2px;
         right: 2px;
     }
+    .transition-color {
+        font-size: 0.7rem;
+        display: flex;
+    }
 }
