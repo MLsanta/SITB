@@ -33,16 +33,21 @@ const desc__main__contents3 = document.querySelector(
 const desc__main__contents4 = document.querySelector(
     ".desc__main__contents4 h1"
 );
-const textContents = document.querySelectorAll(".desc__main__contents");
+const desc__class1 = document.querySelector(".desc__class--1");
 
 // 타이핑 관련
 const content = "오늘을 만드는 기술";
-const desc__class1 = document.querySelector(".desc__class--1");
 let index = 0;
 let typingInterval;
 let typingStarted = false;
 
 function startTyping() {
+    const mobile = window.innerWidth <= 480;
+    if (mobile) {
+        desc__class1.textContent = content; // 모바일이면 바로 출력
+        return; // 애니메이션 종료
+    }
+
     if (!typingStarted) {
         typingStarted = true;
         index = 0;
@@ -66,18 +71,29 @@ function stopTyping() {
     }
 }
 
-// 섹션 offset
-const s__top__1 = sec1.offsetTop;
-const s__top__2 = sec2.offsetTop;
-const s__top__3 = sec3.offsetTop;
-const s__top__4 = sec4.offsetTop;
+// 섹션 offset 계산 (리사이즈에도 대응)
+let s__top__1 = sec1.offsetTop;
+let s__top__2 = sec2.offsetTop;
+let s__top__3 = sec3.offsetTop;
+let s__top__4 = sec4.offsetTop;
+
+function updateSectionOffsets() {
+    s__top__1 = sec1.offsetTop;
+    s__top__2 = sec2.offsetTop;
+    s__top__3 = sec3.offsetTop;
+    s__top__4 = sec4.offsetTop;
+}
+
+window.addEventListener("resize", updateSectionOffsets);
 
 // 스크롤 이벤트
 window.addEventListener("scroll", () => {
     const sy = window.scrollY;
+    const mobile = window.innerWidth <= 480;
+    const offset = mobile ? 200 : 400; // 모바일용 스크롤 오프셋
 
     // 섹션 1
-    if (sy >= s__top__1 - 400 && sy < s__top__2 - 400) {
+    if (sy >= s__top__1 - offset && sy < s__top__2 - offset) {
         desc__main__contents1.classList.add("desc__main__contents1__active");
         img__container1.classList.add("img__container__active");
         desc__sub__container1.classList.add("desc__sub__container__active");
@@ -87,28 +103,22 @@ window.addEventListener("scroll", () => {
         desc__sub__container1.classList.remove("desc__sub__container__active");
     }
 
-    // ✅ 섹션 2
-    if (sy >= s__top__2 - 400 && sy < s__top__3 - 400) {
+    // 섹션 2
+    if (sy >= s__top__2 - offset && sy < s__top__3 - offset) {
         startTyping();
-        document
-            .querySelector(".desc__main__contents2 h1")
-            .classList.add("desc__main__contents__active");
+        desc__main__contents2.classList.add("desc__main__contents__active");
         img__container2.classList.add("img__container__active");
         desc__sub__container2.classList.add("desc__sub__container__active");
     } else {
         stopTyping();
-        document
-            .querySelector(".desc__main__contents2 h1")
-            .classList.remove("desc__main__contents__active");
+        desc__main__contents2.classList.remove("desc__main__contents__active");
         img__container2.classList.remove("img__container__active");
         desc__sub__container2.classList.remove("desc__sub__container__active");
     }
 
-    // ✅ 섹션 3
-    if (sy >= s__top__3 - 400 && sy < s__top__4 - 400) {
-        document
-            .querySelector(".desc__main__contents3 h1")
-            .classList.add("desc__main__contents__active");
+    // 섹션 3
+    if (sy >= s__top__3 - offset && sy < s__top__4 - offset) {
+        desc__main__contents3.classList.add("desc__main__contents__active");
         img__container3.classList.add("img__container__active2");
         desc__sub__container3.classList.add("desc__sub__container__active");
     } else {
@@ -117,11 +127,9 @@ window.addEventListener("scroll", () => {
         desc__sub__container3.classList.remove("desc__sub__container__active");
     }
 
-    // ✅ 섹션 4 (마지막이므로 다음 섹션 없음)
-    if (sy >= s__top__4 - 400) {
-        document
-            .querySelector(".desc__main__contents4 h1")
-            .classList.add("desc__main__contents__active");
+    // 섹션 4
+    if (sy >= s__top__4 - offset) {
+        desc__main__contents4.classList.add("desc__main__contents__active");
         img__container4.classList.add("img__container__active3");
         desc__sub__container4.classList.add("desc__sub__container__active");
     } else {
@@ -131,22 +139,40 @@ window.addEventListener("scroll", () => {
     }
 
     // 버튼 체크
-    desc__btn__1.checked = s__top__1;
+    desc__btn__1.checked = s__top__1 && sy >= s__top__1;
     desc__btn__2.checked = sy >= s__top__1 && sy < s__top__2;
     desc__btn__3.checked = sy >= s__top__2 && sy < s__top__3;
     desc__btn__4.checked = sy >= s__top__3;
 });
 
 // 버튼 클릭 스크롤
-desc__btn__1.addEventListener("click", () => {
-    window.scrollTo({ top: s__top__1 - 300, behavior: "smooth" });
-});
-desc__btn__2.addEventListener("click", () => {
-    window.scrollTo({ top: s__top__2 - 300, behavior: "smooth" });
-});
-desc__btn__3.addEventListener("click", () => {
-    window.scrollTo({ top: s__top__3 - 300, behavior: "smooth" });
-});
-desc__btn__4.addEventListener("click", () => {
-    window.scrollTo({ top: s__top__4 - 300, behavior: "smooth" });
-});
+const scrollToSection = (top) => {
+    const mobile = window.innerWidth <= 480;
+    const offset = mobile ? 150 : 300; // 모바일 스크롤 오프셋
+    window.scrollTo({ top: top - offset, behavior: "smooth" });
+};
+
+desc__btn__1.addEventListener("click", () => scrollToSection(s__top__1));
+desc__btn__2.addEventListener("click", () => scrollToSection(s__top__2));
+desc__btn__3.addEventListener("click", () => scrollToSection(s__top__3));
+desc__btn__4.addEventListener("click", () => scrollToSection(s__top__4));
+
+// 모바일 이미지 스케일 조정
+function adjustImageScale() {
+    if (window.innerWidth <= 480) {
+        img__container1.style.transform = "scale(1)";
+        img__container2.style.transform = "scale(1)";
+        img__container3.style.transform = "scale(1)";
+        img__container4.style.transform = "scale(1)";
+        desc__class1.style.fontSize = "1.2rem";
+    } else {
+        img__container1.style.transform = "";
+        img__container2.style.transform = "";
+        img__container3.style.transform = "";
+        img__container4.style.transform = "";
+        desc__class1.style.fontSize = "";
+    }
+}
+
+window.addEventListener("resize", adjustImageScale);
+adjustImageScale();

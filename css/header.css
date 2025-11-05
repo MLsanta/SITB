@@ -57,11 +57,7 @@
 
 .nav a {
     text-decoration: none;
-<<<<<<< HEAD
-    color: rgb(0, 0, 0);
-=======
     color: black;
->>>>>>> 57feb4375e4614f049cab60eeb1989daef75e954
     position: relative;
     padding-right: 15px;
 }
@@ -113,10 +109,53 @@
 .sub__page .hd .menu a.active,
 .sub__page .hd .nav > svg path {
     color: black !important; /* 텍스트 */
-    fill: black !important;  /* svg 아이콘 */
+    fill: black !important; /* svg 아이콘 */
 }
 
 /* hover 효과도 유지 */
 .sub__page .hd .menu a:hover {
     color: black !important;
+}
+@media (max-width: 480px) {
+    .hd {
+        width: 100vw;
+        height: 60px;
+        transform: translateX(-50%);
+        padding: 0 10px;
+        justify-content: space-between;
+    }
+
+    .nav {
+        width: 100%;
+        height: 60px;
+        font-size: 8px;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .nav .logo {
+        width: 120px;
+        height: 40px;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .nav .menu {
+        width: auto;
+        height: 60px;
+        font-size: 14px;
+        gap: 15px;
+        overflow-x: auto; /* 화면 넘치면 스크롤 가능 */
+    }
+
+    .nav a {
+        padding-right: 8px;
+    }
+
+    .nav a::after {
+        width: 4px;
+        height: 4px;
+        top: -2px;
+        right: 2px;
+    }
 }
