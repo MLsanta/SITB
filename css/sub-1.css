@@ -295,8 +295,6 @@ input[type="radio"]:checked + label.desc__btn__label {
     z-index: 10;
 }
 
-
-
 .desc__main__contents2 h1 {
     width: 100%;
     font-size: 3rem;
@@ -328,4 +326,92 @@ h1.desc__main__contents__active {
     color: white;
     transform: translateY(100px);
     transition: all 0.3s ease;
+}
+/* 모바일 반응형 (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+    }
+    .main__text__container {
+        width: 95%;
+        font-size: 1rem;
+        padding-top: 30px;
+    }
+
+    .main__text {
+        font-size: 1rem;
+        padding-top: 50px;
+    }
+
+    .desc__btn {
+        width: 95%;
+        height: 50px;
+        gap: 10px;
+    }
+
+    .desc__btn__label {
+        width: 80px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 0.5rem;
+    }
+
+    .container {
+        width: 95%;
+        height: auto;
+        margin: 100px auto;
+    }
+
+    .img__container1,
+    .img__container2,
+    .img__container3,
+    .img__container4 {
+        width: 100%;
+        height: 180px;
+        background-size: cover;
+        transform: scale(1);
+    }
+
+    .desc__main__contents2 {
+        margin-top: 150px;
+    }
+    .desc__main__contents3 h1 {
+        font-size: 1rem;
+    }
+    .desc__main__contents4 h1 {
+        font-size: 1rem;
+    }
+    .desc__main__contents1,
+    .desc__main__contents2,
+    .desc__main__contents3,
+    .desc__main__contents4 {
+        font-size: 0.6rem;
+        top: -80px;
+        margin-left: 10px;
+    }
+
+    .desc__sub__container1,
+    .desc__sub__container2,
+    .desc__sub__container3,
+    .desc__sub__container4 {
+        flex-direction: column;
+        padding-top: 10px;
+        top: 180px;
+    }
+
+    .desc__sub__title {
+        font-size: 0.7rem;
+        margin-left: 10px;
+    }
+
+    .desc__sub__contents {
+        font-size: 0.6rem;
+        line-height: 13px;
+        margin-left: 10px;
+    }
+
+    h1.desc__main__contents__active {
+        font-size: 1.3rem;
+        transform: translateY(80px);
+    }
 }
