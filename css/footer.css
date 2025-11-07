@@ -91,4 +91,9 @@
     .copy__right span {
         color: #bbb;
     }
+
+    .footer__text {
+        padding-bottom: 5px;
+        font-size: 14px;
+    }
 }
