@@ -257,11 +257,11 @@ span {
     }
 
     .traffic__desc {
-        font-size: 0.7rem;
+        font-size: 0.7rem !important;
     }
 
     .traffic__park {
-        font-size: 0.7rem;
+        font-size: 0.7rem !important;
     }
 
     section h1.main__text {
