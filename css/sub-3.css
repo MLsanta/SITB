@@ -126,3 +126,66 @@
     display: block;
     opacity: 1;
 }
+
+/* ===== 모바일 ===== */
+@media (max-width: 480px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .news {
+    padding-top: 70px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .tit h2 {
+    font-size: 18px;
+    line-height: 1.45;
+    text-align: center;
+  }
+
+  .wrap {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .img {
+    height: 170px;
+    border-radius: 8px;
+  }
+
+  .txt {
+    padding: 12px 14px;
+  }
+
+  .cat {
+    font-size: 12px;
+    margin-bottom: 3px;
+    line-height: 1.2;
+  }
+
+  .head {
+    font-size: 14px;
+    margin-bottom: 6px;
+    line-height: 1.25; 
+  }
+
+  .date {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+
+  .news__nav {
+    margin: 32px 0;
+    gap: 6px;
+  }
+
+  .news__nav .num,
+  .news__nav .arrow {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    border-radius: 50%;
+  }
+}

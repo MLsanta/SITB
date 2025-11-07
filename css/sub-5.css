@@ -29,7 +29,7 @@ section h1.main__text {
 .mapTypeBox button {
     width: 130px;
     height: 50px;
-    background-color: #fff;
+    background-color: #c5c1c1;
     border-radius: 50px;
     line-height: 50px;
     text-align: center;
@@ -226,3 +226,5 @@ span {
     top: -30px;
     left: 60px;
 }
+
+
