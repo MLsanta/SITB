@@ -1,4 +1,5 @@
 /* 서브메뉴 2 시작 */
+    body {overflow-x: hidden;}
         .sub2-sec1,
         .sub2-sec2,
         .sub2-sec3,
@@ -255,3 +256,192 @@
                     font-size: 1rem;
                 } 
 
+        @media(max-width:480px){
+            .sub2-title{
+                width: 90%;
+                height: 60px;
+                font-size: 0.6rem;
+                margin-bottom: 10px;
+                margin-top: 80px;
+            }
+            .sub2-sec1-outBox,
+            .sub2-sec2-outBox,
+            .sub2-sec3-outBox,
+            .sub2-sec4-outBox,
+            .sub2-sec5-outBox,
+            .sub2-sec6-outBox,
+            .sub2-sec7-outBox{
+                width: 90%;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }        
+            .sub2-sec1-outBox{
+                height: 360px;
+            }
+            .sub2-sec2-outBox{
+                height: 363px;
+            }
+            .sub2-sec3-outBox{
+                height: 355px;
+            }
+            .sub2-sec4-outBox,
+            .sub2-sec5-outBox,
+            .sub2-sec6-outBox{
+                height: 370px;
+            }
+            .sub2-sec7-outBox{
+                height: 365px;
+            }
+            .imgBox{
+                height: 210px;
+            }
+            .sub2-sec1-outBox-imgBox-btn,
+            .sub2-sec2-outBox-imgBox-btn,
+            .sub2-sec3-outBox-imgBox-btn,
+            .sub2-sec4-outBox-imgBox-btn,
+            .sub2-sec5-outBox-imgBox-btn,
+            .sub2-sec6-outBox-imgBox-btn,
+            .sub2-sec7-outBox-imgBox-btn{
+                width: 55px;
+                height: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2px;
+            }
+            .sub2-sec1-outBox-imgBox-btn i,
+            .sub2-sec2-outBox-imgBox-btn i,
+            .sub2-sec3-outBox-imgBox-btn i,
+            .sub2-sec4-outBox-imgBox-btn i,
+            .sub2-sec5-outBox-imgBox-btn i,
+            .sub2-sec6-outBox-imgBox-btn i,
+            .sub2-sec7-outBox-imgBox-btn i{
+                font-size: 12px;
+                line-height: 16px;
+            }
+            .changePage, .page, div{
+                font-size: 8px;
+            }
+            .sub2-sec1-outBox-textBox,
+            .sub2-sec2-outBox-textBox,
+            .sub2-sec3-outBox-textBox,
+            .sub2-sec4-outBox-textBox,
+            .sub2-sec5-outBox-textBox,
+            .sub2-sec6-outBox-textBox,
+            .sub2-sec7-outBox-textBox{
+                height: 150px;
+                flex-direction: column;
+                margin-top: 5px;
+            }
+            .sub2-sec1-outBox-textBox-left,
+            .sub2-sec2-outBox-textBox-left,
+            .sub2-sec3-outBox-textBox-left,
+            .sub2-sec4-outBox-textBox-left,
+            .sub2-sec5-outBox-textBox-left,
+            .sub2-sec6-outBox-textBox-left,
+            .sub2-sec7-outBox-textBox-left{
+                width: 100%;
+                height: 30%;
+                position: relative;
+            }
+            .sub2-sec1-outBox-textBox-left h2,
+            .sub2-sec2-outBox-textBox-left h2,
+            .sub2-sec3-outBox-textBox-left h2,
+            .sub2-sec4-outBox-textBox-left h2,
+            .sub2-sec5-outBox-textBox-left h2,
+            .sub2-sec6-outBox-textBox-left h2,
+            .sub2-sec7-outBox-textBox-left h2{
+                font-size: 18px;
+                position: absolute;
+                top: -20%;
+            }
+            .sub2-sec1-outBox-textBox-left p,
+            .sub2-sec2-outBox-textBox-left p,
+            .sub2-sec3-outBox-textBox-left p,
+            .sub2-sec4-outBox-textBox-left p,
+            .sub2-sec5-outBox-textBox-left p,
+            .sub2-sec6-outBox-textBox-left p,
+            .sub2-sec7-outBox-textBox-left p{
+                font-size: 12px;
+                position: absolute;
+                top: 40%;
+            }
+            .sub2-sec1-outBox-textBox-right,
+            .sub2-sec2-outBox-textBox-right,
+            .sub2-sec3-outBox-textBox-right,
+            .sub2-sec4-outBox-textBox-right,
+            .sub2-sec5-outBox-textBox-right,
+            .sub2-sec6-outBox-textBox-right,
+            .sub2-sec7-outBox-textBox-right{
+                width: 100%;
+                height: 70%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .sub2-sec1-outBox-textBox-right-top,
+            .sub2-sec2-outBox-textBox-right-top,
+            .sub2-sec3-outBox-textBox-right-top,
+            .sub2-sec4-outBox-textBox-right-top,
+            .sub2-sec5-outBox-textBox-right-top,
+            .sub2-sec6-outBox-textBox-right-top,
+            .sub2-sec7-outBox-textBox-right-top{
+                width: 100%;
+                height: auto;
+                margin-bottom: 5px;
+            }
+            .sub2-sec1-outBox-textBox-right-top p{
+                font-size: 9px;
+            }
+            .sub2-sec2-outBox-textBox-right-top p,
+            .sub2-sec3-outBox-textBox-right-top p{
+                font-size: 8px;
+            }
+            .sub2-sec4-outBox-textBox-right-top p,
+            .sub2-sec5-outBox-textBox-right-top p,
+            .sub2-sec6-outBox-textBox-right-top p,
+            .sub2-sec7-outBox-textBox-right-top p{
+                font-size: 7px;
+            }
+            .sub2-sec1-outBox-textBox-right-bottom,
+            .sub2-sec2-outBox-textBox-right-bottom,
+            .sub2-sec3-outBox-textBox-right-bottom{
+                width: 100%;
+                height: 20%;
+                display: flex;
+                color: #62626A;
+                cursor: pointer;
+            }
+            .sub2-sec4-outBox-textBox-right-bottom,
+            .sub2-sec5-outBox-textBox-right-bottom,
+            .sub2-sec6-outBox-textBox-right-bottom,
+            .sub2-sec7-outBox-textBox-right-bottom{
+                width: 100%;
+                min-height: 20%;
+                display: flex;
+                color: #62626A;
+                cursor: pointer;
+            }
+            .sub2-sec1-outBox-textBox-right-bottom-btn1,
+            .sub2-sec2-outBox-textBox-right-bottom-btn1,
+            .sub2-sec3-outBox-textBox-right-bottom-btn1,
+            .sub2-sec4-outBox-textBox-right-bottom-btn1,
+            .sub2-sec5-outBox-textBox-right-bottom-btn1,
+            .sub2-sec6-outBox-textBox-right-bottom-btn1,
+            .sub2-sec7-outBox-textBox-right-bottom-btn1{
+                width: 50px;
+                height: 100%;
+                font-size: 9px;
+            }
+            .sub2-sec1-outBox-textBox-right-bottom-btn2,
+            .sub2-sec2-outBox-textBox-right-bottom-btn2,
+            .sub2-sec3-outBox-textBox-right-bottom-btn2,
+            .sub2-sec4-outBox-textBox-right-bottom-btn2,
+            .sub2-sec5-outBox-textBox-right-bottom-btn2,
+            .sub2-sec6-outBox-textBox-right-bottom-btn2,
+            .sub2-sec7-outBox-textBox-right-bottom-btn2{
+                width: 70px;
+                height: 100%;
+                font-size: 9px;
+            }
+        }

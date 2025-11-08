@@ -39,33 +39,61 @@ document.querySelectorAll(".imgBox").forEach((item) => {
         }
     });
 
-    // 드래그
-    item.addEventListener("mousedown", (e) => {
+    //  pc 드래그
+    item.addEventListener('mousedown', (e) => {
         down = true;
-        startX = e.clientX;
-        item.classList.add("move");
-    });
+        startX = e.clientX
+        item.classList.add('move')
+    })
 
-    window.addEventListener("mouseup", () => {
+    window.addEventListener('mouseup', () => {
         down = false;
-        item.classList.remove("move");
-    });
+        item.classList.remove('move')
+    })
 
-    window.addEventListener("mousemove", (e) => {
+    window.addEventListener('mousemove', (e) => {
         if (!down) return;
-        let dx = e.clientX - startX;
+        let dx = e.clientX - startX
+
+        if (dx > 80  && idx > 0) {
+            idx = (idx - 1 + total) % total
+            show(idx)
+            down = false
+        } else if (dx < -80 && idx < total - 1) {
+            idx = (idx + 1) % total
+            show(idx)
+            down = false
+        }
+    })
+
+    // 모바일 터치 드래그
+    item.addEventListener('touchstart', (e) => {
+        down = true;
+        startX = e.touches[0].clientX
+        item.classList.add('move')
+    }, { passive: true })
+
+    item.addEventListener('touchend', () => {
+        down = false
+        item.classList.remove('move')
+    }, { passive: true })
+
+    item.addEventListener('touchmove', (e) => {
+        if (!down) return
+        let dx = e.touches[0].clientX - startX
 
         if (dx > 80 && idx > 0) {
-            idx = (idx - 1 + total) % total;
-            show(idx);
-            down = false;
+            idx = (idx - 1 + total) % total
+            show(idx)
+            down = false
         } else if (dx < -80 && idx < total - 1) {
-            idx = (idx + 1) % total;
-            show(idx);
-            down = false;
+            idx = (idx + 1) % total
+            show(idx)
+            down = false
         }
-    });
-});
+    }, { passive: true })
+})
+
 
 // 스크롤
 let sections = document.querySelectorAll("section");
