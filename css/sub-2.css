@@ -1,4 +1,5 @@
 /* 서브메뉴 2 시작 */
+    body {overflow-x: hidden;}
         .sub2-sec1,
         .sub2-sec2,
         .sub2-sec3,
