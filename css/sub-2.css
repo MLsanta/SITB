@@ -1,5 +1,12 @@
 /* 서브메뉴 2 시작 */
-    body {width: 100%; max-width: 100%; overflow-x: hidden;}
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%; 
+        max-width: 100%; 
+        overflow-x: hidden !important; 
+        position: relative;
+    }
         .sub2-sec1,
         .sub2-sec2,
         .sub2-sec3,
@@ -77,6 +84,7 @@
             .sub2-sec7-outBox{
                 width: 1200px;
                 height: 680px;
+                overflow: hidden;
                 /* background-color: aquamarine; */
             }
                 .imgBox{
@@ -267,7 +275,7 @@
                 }
 
         @media(max-width:480px){
-            body {width: 100%; overflow-x: hidden !important; margin: 0 auto;}
+            body {overflow-x: hidden !important; margin: 0 auto;}
             .sub2-title{
                 width: 90%;
                 height: 60px;
