@@ -30,14 +30,14 @@ document.querySelectorAll(".imgBox").forEach((item) => {
             idx--;
             show(idx);
         }
-    });
+    })
 
     rightBtn.addEventListener("click", () => {
         if (idx < total - 1) {
             idx++;
             show(idx);
         }
-    });
+    })
 
     //  pc 드래그
     item.addEventListener('mousedown', (e) => {
@@ -94,9 +94,8 @@ document.querySelectorAll(".imgBox").forEach((item) => {
     }, { passive: true })
 })
 
-
 // 스크롤
-let sections = document.querySelectorAll("section");
+let sections = document.querySelectorAll("section")
 
 window.addEventListener("scroll", () => {
     let scrollY = window.scrollY;
@@ -106,5 +105,5 @@ window.addEventListener("scroll", () => {
         if (scrollY + window.innerHeight * 0.8 > item.offsetTop) {
             item.classList.add("active");
         }
-    });
-});
+    })
+})
